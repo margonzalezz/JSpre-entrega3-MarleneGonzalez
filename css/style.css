@@ -4,13 +4,21 @@
     font-family: 'Lato', sans-serif;
 }
 
+/* FONDO DEL HTML */
+.backgrounds{
+    background-color: rgb(112, 112, 112);
+}
+
+
+/* INICIA OFFCANVAS */
 .offcanvas-body{
-    background-color: #005a70;
+    background-color: #69adbe;
+    color: white;
 }
 .offcanvas-header{
     display: flex;
     justify-content: space-around;
-    background-color: #005a70;
+    background-color:#69adbe;
 }
 .offcanvas-header img {
     margin-left: 30%;
@@ -18,3 +26,44 @@
     width: 30%;
 }
 
+/* DROPDOWNS DEL OFFCANVAS */
+.dropdown ul {
+    background-color: #013744;
+}
+.dropdown ul li a{
+    color: white;
+}
+
+/* BOTON DE CIERRE */
+.botonCierre button{
+    background-color: white;
+}
+
+.dropdown button {
+    background-color: #69adbe;
+    border: none;
+}
+
+.titleRedes {
+    margin-top: 20%;
+    margin-left: 4%;
+    font-size: 1.1rem;
+}
+
+.container-redesCanvas a {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 3%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color:#69adbe;
+}
+
+.navbarLogo a img {
+    object-fit: cover;
+    width: 25%;
+    margin-left: 25%;
+}
