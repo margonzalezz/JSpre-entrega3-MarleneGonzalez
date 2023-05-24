@@ -3,3 +3,18 @@
 * {
     font-family: 'Lato', sans-serif;
 }
+
+.offcanvas-body{
+    background-color: #005a70;
+}
+.offcanvas-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #005a70;
+}
+.offcanvas-header img {
+    margin-left: 30%;
+    object-fit: cover;
+    width: 30%;
+}
+
