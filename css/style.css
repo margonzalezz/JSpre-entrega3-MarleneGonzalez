@@ -78,6 +78,16 @@ nav{
     display: none;
 }
 
+/* BODY */
+
+/* FORM ORIGEN/DESTINO */
+
+/* contenedor de select */
+.selectViaje{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
 
 
 
