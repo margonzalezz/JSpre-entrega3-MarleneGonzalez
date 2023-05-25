@@ -15,160 +15,168 @@
 </head>
 <body class="backgrounds">
   <nav>
-    <!-- INICIA BOTÓN HAMBURGUESA -->
-    <div>
-      <a class="btn toggle-button" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-      </a>
-    </div>
-      <!-- TERMINA BOTÓN HAMBURGUESA -->
-      <!-- INICIA OFFCANVAS -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-      <div class="offcanvas-header">
-        <div class="order-2 img-header-canvas">
-          <img src="img/logo/whiteLogo.png" alt="Logo de FlyTrip">
+    <section class="canvasContainer">
+        <!-- INICIA BOTÓN HAMBURGUESA -->
+        <div>
+          <a class="btn toggle-button" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </a>
         </div>
-        <!-- TERMINA TÍTULO DEL OFFCANVAS -->
-        <div class="order-1 botonCierre">
-           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>       
-        </div>
-        <!-- TERMINA CLOSE BUTTON -->
-      </div>
-      <div class="offcanvas-body">
-
-        <!-- INICIA DROPDOWN 1 -->
-        <div class="dropdown mt-3">
-          <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
-            Destinos
-          </button>
-            <ul class="dropdown-menu menuCanvas">
-              <li><a class="dropdown-item" href="#">New York, USA</a></li>
-              <li><a class="dropdown-item" href="#">Venecia, Italia</a></li>
-              <li><a class="dropdown-item" href="#">Ibiza, España</a></li>
-              <li><a class="dropdown-item" href="#">Paris, Francia</a></li>
-              <li><a class="dropdown-item" href="#">Mykonos, Grecia</a></li>
-              <li><a class="dropdown-item" href="#">Bariloche, Argentina</a></li>
-              <li><a class="dropdown-item" href="#">Cataratas del Iguazú, Argentina</a></li>
-            </ul>
-        </div>
-
-        <!-- INICIA DROPDOWN 2 -->
-        <div class="dropdown mt-3">
-          <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
-            Mi cuenta
-          </button>
-            <ul class="dropdown-menu menuCanvas">
-              <li><a class="dropdown-item" href="#">Mis vuelos</a></li>
-              <li><a class="dropdown-item" href="#">Estado de mi vuelo</a></li>
-              <li><a class="dropdown-item" href="#">Cambio de vuelo</a></li>
-              <li><a class="dropdown-item" href="#">Realizar check-in</a></li>
-              <li><a class="dropdown-item" href="#">Agregar medios de pago</a></li>
-              <li><a class="dropdown-item" href="#">Consultar mis KM</a></li>
-            </ul>
-      </div>
-
-        <!-- INICIA DROPDOWN 3 -->
-        <div class="dropdown mt-3">
-          <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
-            Trip Xperience
-          </button>
-            <ul class="dropdown-menu menuCanvas">
-              <li><a class="dropdown-item" href="#">Servicios adicionales</a></li>
-              <li><a class="dropdown-item" href="#">Menú a bordo</a></li>
-              <li><a class="dropdown-item" href="#">Trip GOLD</a></li>
-              <li><a class="dropdown-item" href="#">Tarjeta FlyTrip</a></li>
-              <li><a class="dropdown-item" href="#">Gift Card</a></li>
-              <li><a class="dropdown-item" href="#">Promociones</a></li>
-            </ul>
-      </div>
-
-        <!-- INICIA DROPDOWN 4 -->
-        <div class="dropdown mt-3">
-          <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
-            Ayuda
-          </button>
-            <ul class="dropdown-menu menuCanvas">
-              <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
-              <li><a class="dropdown-item" href="#">Información importante</a></li>
-              <li><a class="dropdown-item" href="#">Documentaciones</a></li>
-            </ul>
-      </div>  
-
-        <!-- INICIA SEGUINOS -->
-        <div class="container-redesCanvas">
-          <p class="titleRedes">Seguinos</p>
-            <div class="redesCanv">
-            <!-- INSTAGRAM -->
-            <a href="https://www.instagram.com/" target="_blank">
-              <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="ir a nuestro instagram">
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <img src="https://img.icons8.com/fluency/48/null/facebook.png" alt="ir a nuestro facebook">
-            </a>
-            <!-- WHATSAPP -->
-            <a href="https://web.whatsapp.com/" target="_blank">
-              <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" alt="chatea con nosotros por whatsapp"> 
-            </a>       
+          <!-- TERMINA BOTÓN HAMBURGUESA -->
+          <!-- INICIA OFFCANVAS -->
+        <div class="offcanvas offcanvas-start canvaShow" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <div class="order-2 img-header-canvas">
+              <img src="img/logo/whiteLogo.png" alt="Logo de FlyTrip">
+            </div>
+            <!-- TERMINA TÍTULO DEL OFFCANVAS -->
+            <div class="order-1 botonCierre">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>       
+            </div>
+            <!-- TERMINA CLOSE BUTTON -->
           </div>
+          <div class="offcanvas-body">
+
+            <!-- INICIA DROPDOWN 1 -->
+            <div class="dropdown mt-3">
+              <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                Destinos
+              </button>
+                <ul class="dropdown-menu menuCanvas">
+                  <li><a class="dropdown-item" href="#">New York, USA</a></li>
+                  <li><a class="dropdown-item" href="#">Venecia, Italia</a></li>
+                  <li><a class="dropdown-item" href="#">Ibiza, España</a></li>
+                  <li><a class="dropdown-item" href="#">Paris, Francia</a></li>
+                  <li><a class="dropdown-item" href="#">Mykonos, Grecia</a></li>
+                  <li><a class="dropdown-item" href="#">Bariloche, Argentina</a></li>
+                  <li><a class="dropdown-item" href="#">Cataratas del Iguazú, Argentina</a></li>
+                </ul>
+            </div>
+
+            <!-- INICIA DROPDOWN 2 -->
+            <div class="dropdown mt-3">
+              <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                Mi cuenta
+              </button>
+                <ul class="dropdown-menu menuCanvas">
+                  <li><a class="dropdown-item" href="#">Mis vuelos</a></li>
+                  <li><a class="dropdown-item" href="#">Estado de mi vuelo</a></li>
+                  <li><a class="dropdown-item" href="#">Cambio de vuelo</a></li>
+                  <li><a class="dropdown-item" href="#">Realizar check-in</a></li>
+                  <li><a class="dropdown-item" href="#">Agregar medios de pago</a></li>
+                  <li><a class="dropdown-item" href="#">Consultar mis KM</a></li>
+                </ul>
+          </div>
+
+            <!-- INICIA DROPDOWN 3 -->
+            <div class="dropdown mt-3">
+              <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                Trip Xperience
+              </button>
+                <ul class="dropdown-menu menuCanvas">
+                  <li><a class="dropdown-item" href="#">Servicios adicionales</a></li>
+                  <li><a class="dropdown-item" href="#">Menú a bordo</a></li>
+                  <li><a class="dropdown-item" href="#">Trip GOLD</a></li>
+                  <li><a class="dropdown-item" href="#">FlyTrip Card</a></li>
+                  <li><a class="dropdown-item" href="#">Gift Card</a></li>
+                  <li><a class="dropdown-item" href="#">Promociones</a></li>
+                </ul>
+          </div>
+
+            <!-- INICIA DROPDOWN 4 -->
+            <div class="dropdown mt-3">
+              <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                Ayuda
+              </button>
+                <ul class="dropdown-menu menuCanvas">
+                  <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
+                  <li><a class="dropdown-item" href="#">Información importante</a></li>
+                  <li><a class="dropdown-item" href="#">Documentaciones</a></li>
+                </ul>
+          </div>  
+
+            <!-- INICIA SEGUINOS -->
+            <div class="container-redesCanvas">
+              <p class="titleRedes">Seguinos</p>
+                <div class="redesCanv">
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="ir a nuestro instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img src="https://img.icons8.com/fluency/48/null/facebook.png" alt="ir a nuestro facebook">
+                </a>
+                <!-- WHATSAPP -->
+                <a href="https://web.whatsapp.com/" target="_blank">
+                  <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" alt="chatea con nosotros por whatsapp"> 
+                </a>       
+              </div>
+            </div>
+            <!-- TERMINA SEGUINOS -->
         </div>
-        <!-- TERMINA SEGUINOS -->
-    </div>
-    <!-- TERMINA OFFCANVAS BODY -->
+        <!-- TERMINA OFFCANVAS BODY -->
 
-    </div>
-    <!-- TERMINA OFFCANVAS -->    
+        </div>
+        <!-- TERMINA OFFCANVAS -->    
+    </section>
 
+
+    <!-- SECCION LOGO -->
       <section class="navbarLogo order-lg-1">
-        <a href="#">
+        <a href="index.html">
           <img src="img/logo/whiteLogo.png" alt="Logo de FlyTrip">
         </a>
-
       </section>
 
+      <!-- SECCION DROPDOWNS DESKTOP -->
+      <section class="dropDesk order-lg-2">
 
+        <div class="box-drop">
+          <button class="dropbtn">Destinos</button>
+            <div class="dropdown-body">
+              <a href="#">New york, Estados Unidos</a>
+              <a href="#">Venecia, Italia</a>
+              <a href="#">Ibiza, España</a>
+              <a href="#">Paris, Francia</a>
+              <a href="#">Mykonos, Grecia</a>
+              <a href="#">Bariloche, Argentina</a>
+              <a href="#">Cataratas del iguazú,</a>
+            </div>                     
+        </div>
 
+        <div class="box-drop">
+          <button class="dropbtn">Trip Xperience</button>
+            <div class="dropdown-body">
+              <a href="#">Servicios adicionales</a>
+              <a href="#">Menú a bordo</a>
+              <a href="#">Promociones</a>
+            </div>          
+        </div>
 
+        <div class="trip-menu">
+          <a href="#">
+            <button class="btn-trip">FlyTrip Card</button>
+          </a>
+          <a href="#">
+            <button class="btn-trip">Promociones</button>
+          </a>
 
+        </div>
 
-
+      </section>
+      <!-- TERMINA SECTION DE DROP MENU PARA DESKTOP -->
 
   </nav>
   <!-- TERMINA NAV -->
-
-
 
     <h1>Mi segunda entrega</h1>
     <p>Mi proyecto está pensado como un sitio web para comprar pasajes de aviones a distintas partes del mundo.
     </p>
     <P>A continuación, el listado de números identificadores para cada destino.</P>
 
-    <section class="destinos">
-       <ul>
-        <li>
-            1. New York, Estados Unidos
-        </li>
-        <li>
-            2. Roma, Italia
-        </li>
-        <li>
-            3. Ibiza, España
-        </li>
-        <li>
-            4. Paris, Francia
-        </li>
-        <li>
-            5. Mykonos, Grecia
-        </li>
-        <li>
-            6. Bariloche, Argentina
-        </li>
-        <li>
-            7. Cataratas de Iguazú, Argentina
-        </li>
-    </ul>     
-    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
