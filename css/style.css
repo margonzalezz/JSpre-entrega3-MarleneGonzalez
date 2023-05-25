@@ -6,7 +6,7 @@
 
 /* FONDO DEL HTML */
 .backgrounds{
-    background-color: rgb(112, 112, 112);
+    background-color: rgb(173, 173, 173);
 }
 
 
@@ -77,6 +77,8 @@ nav{
 .dropDesk {
     display: none;
 }
+
+
 
 
 
@@ -177,8 +179,6 @@ nav{
 .trip-menu button:hover {
     background-color:#013744;
 }
-
-
 
 
 
