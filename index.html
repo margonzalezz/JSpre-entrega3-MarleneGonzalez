@@ -45,6 +45,7 @@
                 Destinos
               </button>
                 <ul class="dropdown-menu menuCanvas">
+                  <li><a class="dropdown-item" href="#">Buenos Aires, Argentina</a></li>
                   <li><a class="dropdown-item" href="#">New York, USA</a></li>
                   <li><a class="dropdown-item" href="#">Venecia, Italia</a></li>
                   <li><a class="dropdown-item" href="#">Ibiza, España</a></li>
@@ -136,6 +137,7 @@
         <div class="box-drop">
           <button class="dropbtn">Destinos</button>
             <div class="dropdown-body">
+              <a href="#">Buenos Aires, Argentina</a>
               <a href="#">New york, Estados Unidos</a>
               <a href="#">Venecia, Italia</a>
               <a href="#">Ibiza, España</a>
@@ -192,35 +194,49 @@
   </div>
 
     <!-- INICIA FORM PARA ELEGIR DESTINOS -->
-    <!-- ORIGEN -->
-    <section class="selectViaje">
-      <div class="selectOrigen">
+
+  <section class="selectViaje">
+      <div class="mb-3 selectOrigen">
+          <label for="selectGroup" class="form-label">ORIGEN</label>
           <select class="form-select" aria-label="select">
-            <option selected>Origen</option>
-            <option value="1">New york, Estados Unidos</option>
-            <option value="2">Venecia, Italia</option>
-            <option value="3">Ibiza, España</option>
-            <option value="4">Paris, Francia</option>
-            <option value="5">Mykonos, Grecia</option>
-            <option value="6">Bariloche, Argentina</option>
-            <option value="7">Cataratas del Iguazú, Argentina</option>
-          </select>        
+            <option selected>Seleccione un origen</option>
+            <option value="1">Buenos Aires, Argentina</option>
+            <option value="2">New York, Estados Unidos</option>
+            <option value="3">Venecia, Italia</option>
+            <option value="4">Ibiza, España</option>
+            <option value="5">Paris, Francia</option>
+            <option value="6">Mykonos, Grecia</option>
+            <option value="7">Bariloche, Argentina</option>
+            <option value="8">Cataratas del Iguazú, Argentina</option>
+          </select>
       </div>
-      <!-- DESTINO -->
-      <div class="selectDestino">
+      <div class="mb-3 selectDestino">
+          <label for="selectGroup" class="form-label">DESTINO</label>
           <select class="form-select" aria-label="select">
-            <option selected>Destino</option>
-            <option value="1">New york, Estados Unidos</option>
-            <option value="2">Venecia, Italia</option>
-            <option value="3">Ibiza, España</option>
-            <option value="4">Paris, Francia</option>
-            <option value="5">Mykonos, Grecia</option>
-            <option value="6">Bariloche, Argentina</option>
-            <option value="7">Cataratas del Iguazú, Argentina</option>
-          </select>        
+            <option selected>Seleccione un destino</option>
+            <option value="1">Buenos Aires, Argentina</option>
+            <option value="2">New York, Estados Unidos</option>
+            <option value="3">Venecia, Italia</option>
+            <option value="4">Ibiza, España</option>
+            <option value="5">Paris, Francia</option>
+            <option value="6">Mykonos, Grecia</option>
+            <option value="7">Bariloche, Argentina</option>
+            <option value="8">Cataratas del Iguazú, Argentina</option>
+          </select>
+      </div>
+      <div class="mb-3 selectPasajeros">
+          <label for="selectGroup" class="form-label">CANTIDAD DE PASAJEROS</label>
+          <input type="text" class="form-control" id="inputPasajeros" placeholder="Ingrese el número de pasajeros">
       </div>
 
-    </section>
+      <div class="buscarVuelos">
+        <a href="#">
+          <button>Buscar vuelos</button>
+        </a>
+      </div>
+
+  </section>
+<p class="mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor possimus totam, amet itaque iste quia dolorem minima. Consectetur optio voluptatem delectus magnam, excepturi animi culpa explicabo corporis? Expedita, ullam!</p>
 
 
 

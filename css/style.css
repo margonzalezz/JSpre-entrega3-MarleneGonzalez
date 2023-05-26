@@ -4,12 +4,6 @@
     font-family: 'Lato', sans-serif;
 }
 
-/* FONDO DEL HTML */
-.backgrounds{
-    background-color: rgb(173, 173, 173);
-}
-
-
 /* INICIA OFFCANVAS */
 .offcanvas-body{
     font-size: 1.10rem;
@@ -29,7 +23,7 @@
 
 /* DROPDOWNS DEL OFFCANVAS */
 .dropdown ul {
-    background-color: #013744;
+    background-color: #06657c;
 }
 .dropdown ul li a{
     font-size: 1.10rem;
@@ -80,20 +74,33 @@ nav{
 
 /* BODY */
 
-/* FORM ORIGEN/DESTINO */
+/* BUSQUEDA DE VUELOS */
 
-/* contenedor de select */
-.selectViaje{
+.selectViaje {
+    background-color: #b6ced4;
+    padding: 5% 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 80%;
 }
 
+.selectViaje label{
+    font-weight: bold;
+}
 
+.buscarVuelos button{
+    border: none;
+    border-radius: 20px;
+    background-color: #06657c;
+    color: white;
+    padding: 4%;
+    font-weight: bold;
+    width: 100%;
+}
 
-
-
-
+.buscarVuelos button:hover{
+    background-color: #013744;
+}
 
 
 
