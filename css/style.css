@@ -78,7 +78,7 @@ nav{
 
 .selectViaje {
     background-color: #b6ced4;
-    padding: 5% 10%;
+    padding: 2% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +101,8 @@ nav{
 .buscarVuelos button:hover{
     background-color: #013744;
 }
+
+
 
 
 
@@ -197,7 +199,11 @@ nav{
     background-color:#013744;
 }
 
+/* SELECCION PARA BUSCAR VUELOS INDEX */
 
+.selectViaje {
+    flex-direction: row;
+}
 
 
 
