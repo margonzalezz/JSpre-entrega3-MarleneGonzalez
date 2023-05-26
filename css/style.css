@@ -78,15 +78,31 @@ nav{
 
 .selectViaje {
     background-color: #b6ced4;
-    padding: 2% 10%;
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .selectViaje label{
+    display: flex;
+    align-items: center;
     font-weight: bold;
 }
+
+.selectOrigen label::before{
+    content: url(../img/icon/despegue.png);
+}
+
+.selectDestino label::after {
+    content: url(../img/icon/aterrizaje.png);
+}
+.selectPasajeros label::before{
+    content: url(../img/icon/asiento.png);
+}
+
+
+
 
 .buscarVuelos button{
     border: none;
@@ -201,8 +217,33 @@ nav{
 
 /* SELECCION PARA BUSCAR VUELOS INDEX */
 
-.selectViaje {
-    flex-direction: row;
+.selectViaje{
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: 
+    "origen" "destino" "pasajeros"
+    "partida" "regreso"
+    "gap" "boton";
+}
+
+.selectOrigen{
+    grid-area: origen;
+}
+.selectDestino{
+    grid-area: destino;
+}
+.selectPasajeros{
+    grid-area: pasajeros;
+}
+.partida{
+    grid-area: partida;
+}
+.regreso{
+    grid-area: regreso;
+}
+.buscarVuelos{
+    grid-area: boton;
 }
 
 
