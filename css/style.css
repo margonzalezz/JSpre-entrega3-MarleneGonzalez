@@ -78,7 +78,7 @@ nav{
 
 .selectViaje {
     background-color: #b6ced4;
-    padding: 5% 10%;
+    padding: 2% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,15 +101,12 @@ nav{
     content: url(../img/icon/asiento.png);
 }
 
-
-
-
 .buscarVuelos button{
     border: none;
     border-radius: 20px;
     background-color: #06657c;
     color: white;
-    padding: 4%;
+    padding: 3%;
     font-weight: bold;
     width: 100%;
 }
@@ -118,6 +115,32 @@ nav{
     background-color: #013744;
 }
 
+.text-principal h1{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10%;
+}
+
+.img-turismo{
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 4%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-turismo img{
+    padding-top: 5%;
+    transform: 2s;
+    object-fit: cover;
+    width: 95%;
+    height: 95%;
+}
+
+.img-turismo img:hover{
+    transform: scale(1);
+}
 
 
 
@@ -219,33 +242,14 @@ nav{
 
 .selectViaje{
     display: grid;
-    grid-template-columns: 3fr;
-    grid-template-rows: 2fr;
-    grid-template-areas: 
-    "origen" "destino" "pasajeros"
-    "partida" "regreso"
-    "gap" "boton";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
 }
 
-.selectOrigen{
-    grid-area: origen;
+.buscarVuelos button{
+    margin-top: 7%;
 }
-.selectDestino{
-    grid-area: destino;
-}
-.selectPasajeros{
-    grid-area: pasajeros;
-}
-.partida{
-    grid-area: partida;
-}
-.regreso{
-    grid-area: regreso;
-}
-.buscarVuelos{
-    grid-area: boton;
-}
-
 
 
 
