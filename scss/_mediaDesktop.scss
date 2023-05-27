@@ -1,0 +1,131 @@
+// MEDIA QUERY PARA DESKTOP
+@media (width > 1024px ){
+    nav{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+/* CANVAS */
+.canvasContainer {
+    display: none;
+}
+
+/* DROPDOWNS PARA DESKTOP */
+    .dropDesk{
+        display: flex;
+        align-items: center;
+    }
+
+/* Dropdown Button */
+    .dropbtn {
+        display: flex;
+        background-color: #69adbe;
+        color: white;
+        padding: 16px;
+        font-size: 1.25rem;
+        border: none;
+        border-radius: 5px;
+    }
+
+/* ICONO DEL DROP */
+    .dropbtn::after {
+        margin-left: 10px;
+        content: url(../img/icon/chevron-abajo.png);
+    }
+
+/* CONTENEDOR DE CADA DROPDOWN */
+    .box-drop {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+
+        &:hover{
+            .dropdown-body{
+                display: block;
+            }
+            .dropbtn{
+                background-color: $darkestBlue;
+            }
+        }
+    }
+
+/* INTERIOR DE CADA DROP */
+  .dropdown-body {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: $mainColor;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+
+            // LINKS DE CADA DROP
+                a {
+                    color: $white;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    width: 17vw;
+
+                    &:hover{
+                        background-color: $darkestBlue;
+                    }
+                }
+  }
+
+  /* BOTONERA MENU DESKTOP SIN DROP */
+
+  .trip-menu{
+            a{
+                text-decoration: none;
+            }
+            button{
+                background-color: $mainColor;
+                color: $white;
+                border: none;
+                border-radius: 10px;
+                padding: 19px;
+                margin-left: 20px;
+                font-size: 1.25rem;
+
+            &:hover{
+                background-color: $darkestBlue;
+            }    
+            }
+  }
+
+/* SELECCION PARA BUSCAR VUELOS INDEX */
+    .selectViaje{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .buscarVuelos{
+                    button{
+                        margin-top: 7%;
+                    }
+    }
+
+
+
+
+
+
+}
+// TERMINA EL MEDIA QUERY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

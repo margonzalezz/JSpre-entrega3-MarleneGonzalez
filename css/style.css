@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 * {
     font-family: 'Lato', sans-serif;
-}
+} */
 
 /* INICIA OFFCANVAS */
 /* .offcanvas-body{
@@ -68,30 +68,30 @@
     margin-left: 25%;
 } */
 
-/* MENU PARA DESKTOP */
+/* MENU PARA DESKTOP
 .dropDesk {
     display: none;
-}
+} */
 
 /* BODY */
 
 /* BUSQUEDA DE VUELOS */
 
-.selectViaje {
+/* .selectViaje {
     background-color: #b6ced4;
     padding: 2% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
-.selectViaje label{
+/* .selectViaje label{
     display: flex;
     align-items: center;
     font-weight: bold;
-}
+} */
 
-.selectOrigen label::before{
+/* .selectOrigen label::before{
     content: url(../img/icon/despegue.png);
 }
 
@@ -100,9 +100,9 @@
 }
 .selectPasajeros label::before{
     content: url(../img/icon/asiento.png);
-}
+} */
 
-.buscarVuelos button{
+/* .buscarVuelos button{
     border: none;
     border-radius: 20px;
     background-color: #06657c;
@@ -114,15 +114,15 @@
 
 .buscarVuelos button:hover{
     background-color: #013744;
-}
+} */
 
-.text-principal h1{
+/* .text-principal h1{
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 10%;
-}
+} */
 
-.img-turismo{
+/* .img-turismo{
     cursor: pointer;
     overflow: hidden;
     padding-left: 4%;
@@ -141,7 +141,7 @@
 
 .img-turismo img:hover{
     transform: scale(1);
-}
+} */
 
 
 
@@ -151,24 +151,24 @@
 
 
 /* MEDIA QUERY PARA DESKTOP */
-@media (width > 1024px){
-    nav {
+/* @media (width > 1024px){ */
+    /* nav {
         display: flex;
         justify-content: flex-start;
-    }
+    } */
 /* CANVAS */
-.canvasContainer {
+/* .canvasContainer {
     display: none;
-}
+} */
 
 /* DROPDOWNS PARA DESKTOP */
-.dropDesk{
+/* .dropDesk{
     display: flex;
     align-items: center;
-}
+} */
 
 /* Dropdown Button */
-.dropbtn {
+/* .dropbtn {
     display: flex;
     background-color: #69adbe;
     color: white;
@@ -176,56 +176,58 @@
     font-size: 1.25rem;
     border: none;
     border-radius: 5px;
-  }
+  } */
 
   /* ICONO DEL DROP */
-  .dropbtn::after {
+  /* .dropbtn::after {
     margin-left: 10px;
     content: url(../img/icon/chevron-abajo.png);
-}
+} */
   
   /* CONTENEDOR DE CADA DROPDOWN */
-  .box-drop {
+  /* .box-drop {
     margin-left: 20px;
     position: relative;
     display: inline-block;
-  }
+  } */
   
   /* INTERIOR DE CADA DROP */
-  .dropdown-body {
+  /* .dropdown-body {
     display: none;
     position: absolute;
     border-radius: 10px;
     background-color: #69adbe;
     box-shadow: 0px 8px 16px 0px #00000033;
     z-index: 1;
-  }
+  } */
 
   /* lINKS DE CADA DROP */
-.dropdown-body a {
+/* .dropdown-body a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     width: 17vw;
-  }
+  } */
 
   /* HOVER DE CADA LINK DEL DROP */
-.dropdown-body a:hover {background-color: #013744;}
+/* .dropdown-body a:hover {background-color: #013744;} */
 
 /* HOVER DEL MENU */
-.box-drop:hover .dropdown-body {display: block;}
+/* .box-drop:hover .dropdown-body {display: block;} */
 
 /* HOVER DEL BOTÓN EXTERIOR */
-.box-drop:hover .dropbtn {background-color:#013744;}
+/* .box-drop:hover .dropbtn {
+    background-color:#013744;
+} */
 /* TERMINA DROP PARA DESKTOP */
 
 /* BOTONERA MENU DESKTOP SIN DROP */
 
-.trip-menu a {
+/* .trip-menu a {
     text-decoration: none;
-}
-.trip-menu button{
+} */
+/* .trip-menu button{
     background-color: #69adbe;
     color: white;
     border: none;
@@ -237,11 +239,11 @@
 
 .trip-menu button:hover {
     background-color:#013744;
-}
+} */
 
 /* SELECCION PARA BUSCAR VUELOS INDEX */
 
-.selectViaje{
+/* .selectViaje{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -250,12 +252,6 @@
 
 .buscarVuelos button{
     margin-top: 7%;
-}
-
-
-
-
-
-
-}
+} */
+/* } */
 /* TERMINA @MEDIA PARA DESKTOP  */

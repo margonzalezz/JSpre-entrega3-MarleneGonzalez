@@ -2,3 +2,74 @@
     font-family: 'Lato', sans-serif;
 }
 
+.selectViaje {
+    background-color: $lightBlue;
+    padding: 2% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+            label{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+            }
+}
+
+.selectOrigen label::before{
+    content: url(../img/icon/despegue.png);
+}
+
+.selectDestino label::after {
+    content: url(../img/icon/aterrizaje.png);
+}
+.selectPasajeros label::before{
+    content: url(../img/icon/asiento.png);
+}
+
+.buscarVuelos{
+
+        button{
+            border: none;
+            border-radius: 20px;
+            background-color: #06657c;
+            color: $white;
+            padding: 3%;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        &:hover{
+            background-color:$darkestBlue;
+        }
+}
+
+.text-principal{
+
+        h1{
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10%;
+        }
+}
+
+.img-turismo{
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 4%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+
+            img{
+                padding-top: 5%;
+                transform: 2s;
+                object-fit: cover;
+                width: 95%;
+                height: 95%;
+            }
+            &:hover{
+                transform: scale(1);
+            }
+}
+

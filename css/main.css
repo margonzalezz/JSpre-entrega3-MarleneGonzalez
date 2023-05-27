@@ -3,6 +3,69 @@
   font-family: "Lato", sans-serif;
 }
 
+.selectViaje {
+  background-color: #b6ced4;
+  padding: 2% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.selectViaje label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.selectOrigen label::before {
+  content: url(../img/icon/despegue.png);
+}
+
+.selectDestino label::after {
+  content: url(../img/icon/aterrizaje.png);
+}
+
+.selectPasajeros label::before {
+  content: url(../img/icon/asiento.png);
+}
+
+.buscarVuelos button {
+  border: none;
+  border-radius: 20px;
+  background-color: #06657c;
+  color: white;
+  padding: 3%;
+  font-weight: bold;
+  width: 100%;
+}
+.buscarVuelos:hover {
+  background-color: #013744;
+}
+
+.text-principal h1 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10%;
+}
+
+.img-turismo {
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 4%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+.img-turismo img {
+  padding-top: 5%;
+  transform: 2s;
+  object-fit: cover;
+  width: 95%;
+  height: 95%;
+}
+.img-turismo:hover {
+  transform: scale(1);
+}
+
 .offcanvas-body {
   font-size: 1.1rem;
   background-color: #69adbe;
@@ -64,6 +127,94 @@ nav {
 
 .dropDesk {
   display: none;
+}
+
+@media (width > 1024px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  /* CANVAS */
+  .canvasContainer {
+    display: none;
+  }
+  /* DROPDOWNS PARA DESKTOP */
+  .dropDesk {
+    display: flex;
+    align-items: center;
+  }
+  /* Dropdown Button */
+  .dropbtn {
+    display: flex;
+    background-color: #69adbe;
+    color: white;
+    padding: 16px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+  }
+  /* ICONO DEL DROP */
+  .dropbtn::after {
+    margin-left: 10px;
+    content: url(../img/icon/chevron-abajo.png);
+  }
+  /* CONTENEDOR DE CADA DROPDOWN */
+  .box-drop {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  .box-drop:hover .dropdown-body {
+    display: block;
+  }
+  .box-drop:hover .dropbtn {
+    background-color: #013744;
+  }
+  /* INTERIOR DE CADA DROP */
+  .dropdown-body {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #69adbe;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-body a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 17vw;
+  }
+  .dropdown-body a:hover {
+    background-color: #013744;
+  }
+  /* BOTONERA MENU DESKTOP SIN DROP */
+  .trip-menu a {
+    text-decoration: none;
+  }
+  .trip-menu button {
+    background-color: #69adbe;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 19px;
+    margin-left: 20px;
+    font-size: 1.25rem;
+  }
+  .trip-menu button:hover {
+    background-color: #013744;
+  }
+  /* SELECCION PARA BUSCAR VUELOS INDEX */
+  .selectViaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  .buscarVuelos button {
+    margin-top: 7%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
