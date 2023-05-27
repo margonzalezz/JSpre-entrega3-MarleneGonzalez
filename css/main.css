@@ -1,3 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  font-family: "Lato", sans-serif;
+}
 
+.offcanvas-body {
+  font-size: 1.1rem;
+  background-color: #69adbe;
+  color: white;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #69adbe;
+}
+.offcanvas-header img {
+  margin-left: 30%;
+  object-fit: cover;
+  width: 30%;
+}
+
+.dropdown ul {
+  background-color: #06657c;
+}
+.dropdown ul li a {
+  font-size: 1.1rem;
+  color: white;
+}
+.dropdown button {
+  font-size: 1.1rem;
+  background-color: #69adbe;
+  border: none;
+}
+
+.botonCierre button {
+  background-color: white;
+}
+
+.titleRedes {
+  margin-top: 20%;
+  margin-left: 4%;
+  font-size: 1.1rem;
+}
+
+.container-redesCanvas a {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 3%;
+}
+
+nav {
+  padding: 1% 0%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #69adbe;
+}
+
+.navbarLogo a img {
+  object-fit: cover;
+  width: 25%;
+  margin-left: 25%;
+}
+
+.dropDesk {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */
