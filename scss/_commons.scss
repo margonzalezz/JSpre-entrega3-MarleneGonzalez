@@ -14,7 +14,35 @@
                 align-items: center;
                 font-weight: bold;
             }
+            .seleccionTipoPasaje{
+                display: flex;
+                justify-content: center;
+
+                    button{
+                        background-color: $DarkBlue;
+                        color: $white;
+                        border: none;
+                    }
+
+                    .selectIda{
+                        background-color: $DarkBlue;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        border-right: $white;
+                        margin-right: 1%;
+                        border-radius: 5px
+
+                    }
+
+                    .select-idaYvuelta{
+                        @extend .selectIda;
+                    }
+
+            }
 }
+
+
 
 .selectOrigen label::before{
     content: url(../img/icon/despegue.png);

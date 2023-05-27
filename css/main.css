@@ -15,7 +15,24 @@
   align-items: center;
   font-weight: bold;
 }
-
+.selectViaje .seleccionTipoPasaje {
+  display: flex;
+  justify-content: center;
+}
+.selectViaje .seleccionTipoPasaje button {
+  background-color: #06657c;
+  color: white;
+  border: none;
+}
+.selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
+  background-color: #06657c;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-right: white;
+  margin-right: 1%;
+  border-radius: 5px;
+}
 .selectOrigen label::before {
   content: url(../img/icon/despegue.png);
 }
