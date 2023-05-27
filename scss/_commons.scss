@@ -106,3 +106,43 @@
             }
 }
 
+footer{
+    background-color: $mainColor;
+}
+
+.accordion-header{
+    .accordion-drop{
+        background-color: $mainColor;
+        color: $white;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: $darkestBlue;
+        color: $white;
+    }
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $white;
+    height: 80px;
+    margin-bottom: 5px;
+
+    h3{
+        font-size: 1rem;
+    }
+
+    input{
+        width: 80%;
+        border: none;
+        border-radius: 8px;
+    }
+}
+
+.footerDesktop{
+    display: none;
+}

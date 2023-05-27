@@ -86,6 +86,42 @@
   transform: scale(1);
 }
 
+footer {
+  background-color: #69adbe;
+}
+
+.accordion-header .accordion-drop {
+  background-color: #69adbe;
+  color: white;
+}
+.accordion-header .accordion-button:not(.collapsed) {
+  background-color: #013744;
+  color: white;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  height: 80px;
+  margin-bottom: 5px;
+}
+.newsletter h3 {
+  font-size: 1rem;
+}
+.newsletter input {
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+}
+
+.footerDesktop {
+  display: none;
+}
+
 .offcanvas-body {
   font-size: 1.1rem;
   background-color: #69adbe;
@@ -232,8 +268,14 @@ nav {
     grid-template-rows: 1fr 1fr;
     gap: 20px;
   }
-  .buscarVuelos button {
+  .selectViaje .seleccionTipoPasaje {
     margin-top: 7%;
+    display: flex;
+    align-items: center;
+  }
+  .selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
+    align-items: center;
+    height: 60%;
   }
   .text-principal h1 {
     font-size: 2.5rem;
@@ -247,6 +289,73 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
+  }
+  .container-trip figure {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .container-trip figure:hover > .hover {
+    opacity: 0.7;
+    visibility: visible;
+  }
+  .container-trip figure:hover > img {
+    transform: scale(1.1);
+  }
+  .hover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(82, 82, 82, 0.8784313725);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+  }
+  .footerMobile {
+    display: none;
+  }
+  .footerDesktop {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .footerDesktop .box-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .footerDesktop .box-footer h3 {
+    color: white;
+    font-weight: bold;
+  }
+  .footerDesktop .box-footer ul {
+    padding-left: 0;
+  }
+  .footerDesktop .box-footer ul li {
+    list-style: none;
+  }
+  .footerDesktop .box-footer ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .footerDesktop .box-footer input {
+    height: 25%;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+  }
+  .footerDesktop .footer-redes {
+    display: flex;
+  }
+  .footerDesktop .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

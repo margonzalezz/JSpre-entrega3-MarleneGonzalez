@@ -99,13 +99,21 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 20px;
+
+            .seleccionTipoPasaje{
+                margin-top: 7%;
+                display: flex;
+                align-items: center;
+
+
+                 .selectIda{
+                    align-items: center;
+                    height: 60%;
+                }               
+            }
+
     }
 
-    .buscarVuelos{
-                    button{
-                        margin-top: 7%;
-                    }
-    }
 
     // TITULO DEL INDEX
     .text-principal{
@@ -126,6 +134,110 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
     }
+
+    .container-trip{
+
+        figure{
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 6px;
+
+            &:hover > .hover{
+                opacity: 0.7;
+                visibility: visible;
+            }
+            &:hover > img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    .hover{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $transparencia;
+        transition: all 400ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+    .footerMobile{
+        display: none;
+    }
+
+
+.footerDesktop{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+
+            .box-footer{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                margin-left: 20px;
+
+                h3{
+                    color:$white;
+                    font-weight: bold;
+                }
+                ul{
+                    padding-left: 0;
+
+                    li{
+                        list-style: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $white;
+                        }
+                    }
+                }
+                input{
+                    height: 25%;
+                    width: 70%;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+            .footer-redes{
+                display: flex;
+            }
+            .footer-newsletter{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

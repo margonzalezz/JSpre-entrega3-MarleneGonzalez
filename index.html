@@ -62,6 +62,8 @@
                 Mi cuenta
               </button>
                 <ul class="dropdown-menu menuCanvas">
+                  <li><a class="dropdown-item" href="#">Inicia sesión</a></li>
+                  <li><a class="dropdown-item" href="#">Registrate</a></li>
                   <li><a class="dropdown-item" href="#">Mis vuelos</a></li>
                   <li><a class="dropdown-item" href="#">Estado de mi vuelo</a></li>
                   <li><a class="dropdown-item" href="#">Cambio de vuelo</a></li>
@@ -202,7 +204,7 @@
 
     <!-- BOTONES PARA SELECCIONAR IDA/VUELTA -->
     <div class="seleccionTipoPasaje">
-      
+
       <div class="selectIda">
         <a href="#">          
           <button>Sólo Ida</button>
@@ -276,10 +278,39 @@
 </section>
 
   <section class="img-turismo">
-    <img src="img/imagenes/ibiza.png" alt="">
-    <img src="img/imagenes/brcCard.png" alt="">
-    <img src="img/imagenes/paris.promo.png" alt="">
-    <img src="img/imagenes/passport.png" alt="">
+
+    <article class="container-trip">
+      <figure>
+        <img src="img/imagenes/sin-text/ibiza.png" alt=""> 
+        <div class="hover">
+          <img src="img/logo/xperience.png" alt="">
+        </div>       
+      </figure>
+    </article>
+
+    <article class="container-trip">
+      <figure>
+        <img src="img/imagenes/sin-text/nieveBrc.png" alt="">
+        <div class="hover">
+          <img src="img/logo/card.png" alt="cards">
+        </div>
+      </figure>
+    </article>
+
+    <article class="container-trip">
+      <figure>
+        <img src="img/imagenes/sin-text/paris-fr.png" alt="">     
+        <div class="hover">
+          <img src="img/logo/promociones.png" alt="">
+        </div>
+      </figure>
+    </article>
+
+
+
+
+
+    <!-- <img src="img/imagenes/passport.png" alt=""> -->
   </section>
 
 
@@ -287,54 +318,129 @@
 </body>
 <footer>
 
-  <div class="accordion accordion-flush" id="accordionFooter">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Información
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFooter">
-        <div class="accordion-body">
-          <ul>
-            <li>
-              <a href="#">Documentación importante</a>
-            </li>
-            <li>
-              <a href="#">Check in</a>
-            </li>
-            <li>
-              <a href="#">Preguntas frecuentes</a>
-            </li>
-            <li>
-              <a href="#">Cambio de vuelos</a>
-            </li>
-          </ul>
+  <section class="footerDesktop">
+    <div class="box-footer">
+      <h3>Información</h3>
+      <ul>
+        <li>
+          <a href="#">Documentación importante</a>
+        </li>
+        <li>
+          <a href="#">Check in</a>
+        </li>
+        <li>
+          <a href="#">Preguntas frecuentes</a>
+        </li>
+        <li>
+          <a href="#">Cambio de vuelo</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box-footer">
+      <h3>MI CUENTA</h3>
+      <ul>
+        <li>
+          <a href="#">Inica sesión</a>
+        </li>
+        <li>
+          <a href="#">Registrate</a>
+        </li>
+        <li>
+          <a href="#">Consultar mis km</a>
+        </li>
+        <li>
+          <a href="#">Estado de mi vuelo</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box-footer">
+      <h3>SEGUINOS</h3>
+        <div class="footer-redes">
+          <!-- INSTAGRAM -->
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="ir a nuestro instagram">
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="https://img.icons8.com/fluency/48/null/facebook.png" alt="ir a nuestro facebook">
+          </a>
+          <!-- WHATSAPP -->
+          <a href="https://web.whatsapp.com/" target="_blank">
+            <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" alt="chatea con nosotros por whatsapp"> 
+          </a> 
         </div>
-      </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFooter">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFooter">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-      </div>
-    </div>
-  </div>
 
+    <div class="box-footer footer-newsletter">
+        <h3>Recibí los mejores descuentos</h3>
+        <input type="email" name="newsletter" id="newsletter-trip">
+    </div>
 
+  </section>
+
+  <section class="footerMobile">
+
+      <section class="newsletter">
+        <h3>Recibí los mejores descuentos en tu mail</h3>
+        <input type="email" name="newsletter" id="newsletter-trip">
+      </section>
+
+      <div class="accordion accordion-flush" id="accordionFooter">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed accordion-drop" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Información
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFooter">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <a href="#">Documentación importante</a>
+                </li>
+                <li>
+                  <a href="#">Check in</a>
+                </li>
+                <li>
+                  <a href="#">Preguntas frecuentes</a>
+                </li>
+                <li>
+                  <a href="#">Cambio de vuelos</a>
+                </li>
+                <li>
+                  <a href="#">Aeropuertos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed accordion-drop" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Mi cuenta
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFooter">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <a href="#">Iniciar sesión</a>
+                </li>
+                <li>
+                  <a href="#">Registrarse</a>
+                </li>
+                <li>
+                  <a href="#">Consultar mis km</a>
+                </li>
+                <li>
+                  <a href="#">Estado de mi vuelo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>    
+  </section>
 </footer>
 </html>
