@@ -37,18 +37,20 @@
   font-weight: bold;
   width: 100%;
 }
-.buscarVuelos:hover {
+.buscarVuelos button:hover {
   background-color: #013744;
 }
 
 .text-principal h1 {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 10%;
+}
+.text-principal p {
+  padding: 0% 5%;
 }
 
 .img-turismo {
-  cursor: pointer;
   overflow: hidden;
   padding-left: 4%;
   display: grid;
@@ -56,6 +58,7 @@
   grid-template-columns: 1fr 1fr;
 }
 .img-turismo img {
+  cursor: pointer;
   padding-top: 5%;
   transform: 2s;
   object-fit: cover;
@@ -214,6 +217,19 @@ nav {
   }
   .buscarVuelos button {
     margin-top: 7%;
+  }
+  .text-principal h1 {
+    font-size: 2.5rem;
+    margin-top: 5%;
+  }
+  .text-principal p {
+    font-size: 1.3rem;
+  }
+  .img-turismo {
+    padding-left: 1.2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
   }
 }
 
