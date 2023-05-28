@@ -120,6 +120,17 @@ footer {
   color: white;
 }
 
+.accordText {
+  background-color: #06657c;
+}
+.accordText ul {
+  list-style: none;
+}
+.accordText ul li a {
+  text-decoration: none;
+  color: white;
+}
+
 .newsletter {
   display: flex;
   flex-direction: column;
