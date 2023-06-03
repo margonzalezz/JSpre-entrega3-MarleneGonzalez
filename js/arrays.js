@@ -10,22 +10,34 @@ const lugares = [
     {numero: 7, lugar: "Bariloche, Argentina"} ,            //Iberia - AmAirlines - Aerolíneas Argentinas
     {numero: 8, lugar: "Cataratas de Iguazú, Argentina"}];  //Iberia - AmAirlines - Aerolíneas Argentinas
 
-    // ARRAY DE EJEMPLO DEL AFTER
-    const prendas = [
-    {imagen: '👚', codigo: 1, tipo: 'Remera rosa', precio: 2599},
-    {imagen: '🩳', codigo: 2, tipo: 'Bermuda playera', precio: 3859},
-    {imagen: '👕', codigo: 3, tipo: 'Remera casual', precio: 7851},
-    {imagen: '👖', codigo: 4, tipo: 'Pantalón de jean', precio: 8599},]
-
     // ARRAY DE OBJETOS CON LAS AEROLÍNEAS DISPONIBLES
-    const aerolíneas = [
-        {aerolínea1: "Aerolíneas Argentinas", precio: 250000} ,
-        {aerolínea2: "Iberia", precio: 280000} ,
-        {aerolínea3: "American Airlines", precio: 305000}]
+    const aerolineas = [
+        {aerolinea: "Aerolíneas Argentinas", precio: 250000, habilitado:[1, 2, 3, 4, 7, 8] } ,
+        {aerolinea: "Iberia", precio: 280000, habilitado: [1, 2, 3, 4, 5, 6, 7, 8] } ,
+        {aerolinea: "American Airlines", precio: 305000, habilitado: [1, 2, 3, 5, 6, 7, 8] }]
 
-    const opcionesPasajes = [
-        {nroPasaje: 1, origen: origenSeleccionado.lugar, destino: destinoSeleccionado.lugar}
-    ]
+  /*
+    function encontrarAerolinea(destino) {
+      const numeroLugar = destino.numero; //HAGO ESTO PARA ACCEDER AL NRO QUE INGRESÓ
+                          //SI ESTO NO FUNCA TENGO QUE CAMBIARLO POR destinoSeleccionado.numero
+      const coincidencia = aerolineas.filter(aerolinea => {
+        return aerolinea.habilitado.includes(numeroLugar);
+      });
+      
+      return coincidencia;
+    }
+    
+  */
+
+
+  
+
+
+
+    // const opcionesPasajes = [
+    //     {nroPasaje: 1, origen: origenSeleccionado.lugar, destino: destinoSeleccionado.lugar, air: ,}
+    // ]
+
 
     //EJECUTAR EL MÉTODO filter PARA QUE BUSQUE DENTRO DEL ARRAY SELECCIONADO Y ME DEVUELVA
     //LAS COINCIDENCIAS DE LAS AEROLÍNEAS Y LUEGO, USAR EL MISMO ARRAY PARA LOS PRECIOS

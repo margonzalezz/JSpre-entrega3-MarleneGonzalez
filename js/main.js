@@ -35,19 +35,25 @@
       if (selectIda == true) {
         alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda");
         soloIda();
+        resultado = { tipo: "Ida" };
       } else {
           selectIdaYvuelta = confirm("¿Deseas reservar un asiento de ida y vuelta?" + "\nSi es así, presiona Aceptar para continuar")
           if (selectIdaYvuelta == true) {
             alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda");
             soloIda();
             regreso();
+            resultado = { tipo: "IdaYVuelta" };
           } else{
             alert("No dudes en regresar cuando decidas tu viaje :)")
-            return
+            return;
           }
       }
+
+          return resultado.tipo;
   }
-select()
+
+  const opcionSeleccionada = select();  //ESTAS 2 LÍNEAS DE CÓDIGO SON LAS QUE HACEN QUE ME DEVUELVA ALGÚN TIPO DE VALOR
+  alert(opcionSeleccionada); 
 
   //FUNCIÓN PARA QUE EL USUARIO ELIJA ENTRE ALGUNOS DE LOS SIGUIENTES ORIGENES PREDETERMINADOS
   function selectOrigen(origenes) {
@@ -83,12 +89,21 @@ select()
   // CANTIDAD DE PASAJEROS A VIAJAR
       let cantPasajeros = isNaN(prompt("Por favor, indiquenos la cantidad de pasajeros a viajar"));     //LA CANTIDAD DE PASAJEROS SELECCIONADA LA TENGO QUE MULTIPLICAR POR EL IMPORTE MÁS ADELANTE
 
-  //FUNCIÓN PARA CALCULAR UN IMPUESTO PAÍS 
-  const impuesto = dhfd
-  function impuestoPaís() {
-    if (origenSeleccionado.numero === 1 || origenSeleccionado.numero === 7 || origenSeleccionado.numero === 8) {
+  // FUNCIÓN PARA ENCONTRAR UNA AEROLÍNEA QUE COINCIDA CON EL NRO INDICADO EN EL DESTINO
+    function encontrarAerolinea(destino) { // recibimos el objeto destino
+      const numeroLugar = destino.numero; // accedemos al número
       
+        const coincidencia = aerolineas.filter(aerolinea => {
+          return aerolinea.habilitado.includes(numeroLugar);
+        });
+      return coincidencia;
     }
-  }
 
 
+  //FUNCIÓN PARA CALCULAR UN IMPUESTO PAÍS 
+  // const impuesto = ((aerolineas.precio * 37) / 100)
+  // function impuestoPaís() {
+  //   if (origenSeleccionado == 1 || origenSeleccionado == 7 || origenSeleccionado == 8) {
+  //     //PRECIO SUBTOTAL DEL PASAJE + impuesto = TOTAL DEL PASAJE
+  //   }
+  // }
