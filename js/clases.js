@@ -37,16 +37,30 @@
 //   const pasaje = new Pasaje(destinoSeleccionado.lugar, aerolineaSeleccionada, precioSeleccionado);
 //   console.log(pasaje);
 
-  function Pasaje(tipoPasaje, origen, destino, aerolinea, precio) {
-        this.tipoPasaje = tipoPasaje;
-        this.origen = origen;
-        this.destino = destino;
-        this.air = aerolinea;
-        this.importe = precio;
-    }
+  class Pasaje {
+  constructor(tipoPasaje, origen, destino, aerolinea) {
+    this.tipoPasaje = tipoPasaje;
+    this.origen = origen;
+    this.destino = destino;
+    this.air = aerolinea;
+  }
+}
   
-    const Pasaje1 = new Pasaje ()
+//const Pasaje1 = new Pasaje (opcionSeleccionada, origenSeleccionado.lugar, destinoSeleccionado.lugar, airSeleccionada);
+    
+// Array para almacenar las nuevas instancias de Pasaje
+const contenedorPasajes = [];
 
+// Crear nuevas instancias de Pasaje para cada destino
+destinosSeleccionados.forEach(destino => {
+  const pasaje = new Pasaje(opcionSeleccionada, origenSeleccionado, destino, aerolineaSeleccionada);
+  contenedorPasajes.push(pasaje);
+});
+
+// Mostrar las nuevas instancias de Pasaje
+contenedorPasajes.forEach(pasaje => {
+  console.log(pasaje);
+});
 
 
 
