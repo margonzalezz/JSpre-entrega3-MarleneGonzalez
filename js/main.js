@@ -7,33 +7,34 @@
     let fechaIngrIda;
     let fechaActual;
       function soloIda() {
-        fechaIda = prompt("Ingrese la fecha de partida con el formato (dd/mm/aaaa): ");
+        fechaIda = prompt("📅 Ingrese la fecha de partida con el formato (dd/mm/aaaa): ");
         fechaIngrIda = new Date(fechaIda);
         fechaActual = new Date();
           while (fechaIngrIda < fechaActual) {
-            alert("Por favor, ingrese una fecha válida");}}
+            alert("Por favor, ingrese una fecha válida");}
+          }
     // FUNCIÓN PARA CUANDO EL USUARIO QUIERE REGRESAR
     let fechaRegreso;
     let fechaIngRegreso;
     function regreso() {
-      fechaRegreso = prompt("Ingrese la fecha de regreso con el formato (dd/mm/aaaa): ");
+      fechaRegreso = prompt("📅 Ingrese la fecha de regreso con el formato (dd/mm/aaaa): ");
       fechaIngRegreso = new Date(fechaRegreso);
       fechaActual = new Date();
-        while (fechaIngRegreso < fechaActual) {
+        while (fechaIngRegreso < fechaActual || fechaIngRegreso < fechaIngrIda) {
           alert("Por favor, ingrese una fecha válida");}
         }
 
   // FUNCION PARA PREGUNTARLE AL USUARIO EL TIPO DE PASAJE QUE DESEA SELECCIONAR
   function select() {
-    let selectIda = confirm("Hola, " + nombre + " ¿Deseas reservar un asiento sólo de ida?" + "\nSi es así, presiona Aceptar para continuar")
+    let selectIda = confirm("Hola, " + nombre + " ¿Deseas reservar un asiento sólo de ida? ⬆" + "\nSi es así, presiona Aceptar para continuar")
       if (selectIda == true) {
-        alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda");
+        alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda ✈");
           soloIda();
           resultado = { tipo:"Ida"};
       } else {
-          selectIdaYvuelta = confirm("¿Deseas reservar un asiento de ida y vuelta?" + "\nSi es así, presiona Aceptar para continuar")
+          selectIdaYvuelta = confirm(nombre + "¿Deseas reservar un asiento de ida y vuelta? ↕" + "\nSi es así, presiona Aceptar para continuar")
           if (selectIdaYvuelta == true) {
-            alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda");
+            alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda ✈");
               soloIda();
               regreso();
               resultado = { tipo:"IdaYVuelta"};
@@ -97,6 +98,7 @@
         if(coincidencia == true) {
           nameAir = (coincidencia.aerolinea.precio);
         } 
-      return coincidencia;
+          return coincidencia;
     }
     const airEncontrada = encontrarAerolinea(destino);
+    
