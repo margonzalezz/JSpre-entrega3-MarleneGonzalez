@@ -29,14 +29,14 @@
       if (selectIda == true) {
         alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda");
           soloIda();
-          resultado = { tipo: "Ida" };
+          resultado = { tipo:"Ida"};
       } else {
           selectIdaYvuelta = confirm("¿Deseas reservar un asiento de ida y vuelta?" + "\nSi es así, presiona Aceptar para continuar")
           if (selectIdaYvuelta == true) {
             alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda");
               soloIda();
               regreso();
-              resultado = { tipo: "IdaYVuelta" };
+              resultado = { tipo:"IdaYVuelta"};
           } else{
             alert("No dudes en regresar cuando decidas tu viaje :)")
             return;
@@ -103,21 +103,3 @@
       return coincidencia;
     }
     const airEncontrada = encontrarAerolinea(destino);
-
-
-  // CALCULAR IMPUESTO PAÍS
-  const impuesto = ((aerolineas.precio * 37) / 100);
-  let importeTotalImp;
-  let importeTotal;
-    function impuestoPais() {
-      if (origenSelected == 1 || origenSelected == 7 || origenSelected == 8) {
-        importeTotalImp = (Pasaje.precio + impuesto);
-      } else {
-        importeTotal = Pasaje.precio;
-      }
-    }
-
-
-
-
-

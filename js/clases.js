@@ -15,15 +15,26 @@
   let aerolineaSeleccionada;
 
 airEncontrada.forEach((aerolinea) => {
-  const pasaje = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolinea.aerolinea, aerolinea.precio);
+  let precioPasaje = aerolinea.precio;
+
+  if (origenSelected.includes("Argentina")) {
+    precioPasaje += precioPasaje * 0.37; // Incremento del 37%
+  }
+  const pasaje = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolinea.aerolinea, precioPasaje);
   contenedorPasajes.push(pasaje);
-      if (opcionSeleccionada === "IdaYVuelta") {
-        aerolineaSeleccionada = aerolinea;
-        const precioDoble = aerolineaSeleccionada.precio * 2;
-        const pasajeIncrementado = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolineaSeleccionada.aerolinea, precioDoble);
-        contenedorPasajes.push(pasajeIncrementado);
-        console.log(pasajeIncrementado);
-      }
+
+  if (opcionSeleccionada === "IdaYVuelta") {
+    aerolineaSeleccionada = aerolinea;
+    let precioDoble = aerolineaSeleccionada.precio * 2;
+
+    if (origenSelected.includes("Argentina")) {
+      precioDoble += precioDoble * 0.37; // Incremento del 37%
+    }
+
+    const pasajeIncrementado = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolineaSeleccionada.aerolinea, precioDoble);
+    contenedorPasajes.push(pasajeIncrementado);
+    console.log(pasajeIncrementado);
+  }
 });
 
 if (opcionSeleccionada !== "IdaYVuelta") {
