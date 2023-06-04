@@ -11,9 +11,7 @@
             fechaIngrIda = new Date(fechaIda);
             fechaActual = new Date();
             while (fechaIngrIda < fechaActual) {
-              alert("Por favor, ingrese una fecha válida");
-            }
-          }
+              alert("Por favor, ingrese una fecha válida");}}
           // FUNCIÓN PARA CUANDO EL USUARIO QUIERE REGRESAR
           let fechaRegreso;
           let fechaIngRegreso;
@@ -22,9 +20,8 @@
             fechaIngRegreso = new Date(fechaRegreso);
             fechaActual = new Date();
               while (fechaIngRegreso < fechaActual) {
-                alert("Por favor, ingrese una fecha válida");
+                alert("Por favor, ingrese una fecha válida");}
               }
-          }
 
   // FUNCION PARA PREGUNTARLE AL USUARIO EL TIPO DE PASAJE QUE DESEA SELECCIONAR
   function select() {
@@ -46,8 +43,7 @@
           }
       }
           return resultado.tipo;
-  }
-
+        }
   const opcionSeleccionada = select();  //Me devuelve lo que eligió el usuario ida o ida-y-vuelta alert(opcionSeleccionada)
 
       //FUNCIÓN PARA QUE EL USUARIO ELIJA ENTRE ALGUNOS DE LOS SIGUIENTES ORIGENES PREDETERMINADOS
@@ -74,7 +70,6 @@
           return valorOrigen.eleccion;
     }
     const origenSelected = eleccionOrigen(); //ME DEVUELVE QUE ORIGEN ELIGIÓ EL USUARIO
-    
 
   // FUNCIÓN PARA QUE EL USUARIO ELIJA EL DESTINO
   let destinoSeleccionado;
@@ -109,25 +104,6 @@
     }
     const airEncontrada = encontrarAerolinea(destino);
 
-  //CONSTRUCTOR DEL PASAJE
-  class Pasaje {
-    static contadorId = 1;
-
-    constructor(tipoPasaje, origen, destino, aerolinea, precio) {
-      this.id = Pasaje.contadorId++;
-      this.tipoDePasaje = tipoPasaje;
-      this.origen = origen;
-      this.destino = destino;
-      this.aerolinea = aerolinea;
-      this.precio = precio;
-    }
-  }
-  const contenedorPasajes = [];
-  airEncontrada.forEach(aerolinea => {
-    const pasaje = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolinea.aerolinea, aerolinea.precio);
-    contenedorPasajes.push({})
-  });
-    //ACÁ IBAN LAS NUEVAS INSTANCIAS DE Pasaje.
 
   // CALCULAR IMPUESTO PAÍS
   const impuesto = ((aerolineas.precio * 37) / 100);
@@ -140,8 +116,7 @@
         importeTotal = Pasaje.precio;
       }
     }
-  // // Mostrar las nuevas instancias de Pasaje
-  contenedorPasajes.forEach(pasaje => {console.log(pasaje)});
+
 
 
 
