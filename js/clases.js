@@ -28,7 +28,7 @@ airEncontrada.forEach((aerolinea) => {
     let precioDoble = aerolineaSeleccionada.precio * 2;
 
     if (origenSelected.includes("Argentina")) {
-      precioDoble += precioDoble * 0.37; // Incremento del 37%
+      precioDoble += precioDoble * 0.37; // Precio incrementado si es ida y vuelta y viaja desde Argentina
     }
 
     const pasajeIncrementado = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolineaSeleccionada.aerolinea, precioDoble);

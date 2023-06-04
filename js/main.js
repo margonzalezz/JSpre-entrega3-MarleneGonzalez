@@ -2,26 +2,26 @@
   let nombre = prompt("Por favor, ingrese su nombre");
   let selectIdaYvuelta;
 
-          // FUNCIÓN PARA CUANDO EL USUARIO SÓLO QUIERE VIAJAR DE IDA
-          let fechaIda;
-          let fechaIngrIda;
-          let fechaActual;
-          function soloIda() {
-            fechaIda = prompt("Ingrese la fecha de partida con el formato (dd/mm/aaaa): ");
-            fechaIngrIda = new Date(fechaIda);
-            fechaActual = new Date();
-            while (fechaIngrIda < fechaActual) {
-              alert("Por favor, ingrese una fecha válida");}}
-          // FUNCIÓN PARA CUANDO EL USUARIO QUIERE REGRESAR
-          let fechaRegreso;
-          let fechaIngRegreso;
-          function regreso() {
-            fechaRegreso = prompt("Ingrese la fecha de regreso con el formato (dd/mm/aaaa): ");
-            fechaIngRegreso = new Date(fechaRegreso);
-            fechaActual = new Date();
-              while (fechaIngRegreso < fechaActual) {
-                alert("Por favor, ingrese una fecha válida");}
-              }
+    // FUNCIÓN PARA CUANDO EL USUARIO SÓLO QUIERE VIAJAR DE IDA
+    let fechaIda;
+    let fechaIngrIda;
+    let fechaActual;
+      function soloIda() {
+        fechaIda = prompt("Ingrese la fecha de partida con el formato (dd/mm/aaaa): ");
+        fechaIngrIda = new Date(fechaIda);
+        fechaActual = new Date();
+          while (fechaIngrIda < fechaActual) {
+            alert("Por favor, ingrese una fecha válida");}}
+    // FUNCIÓN PARA CUANDO EL USUARIO QUIERE REGRESAR
+    let fechaRegreso;
+    let fechaIngRegreso;
+    function regreso() {
+      fechaRegreso = prompt("Ingrese la fecha de regreso con el formato (dd/mm/aaaa): ");
+      fechaIngRegreso = new Date(fechaRegreso);
+      fechaActual = new Date();
+        while (fechaIngRegreso < fechaActual) {
+          alert("Por favor, ingrese una fecha válida");}
+        }
 
   // FUNCION PARA PREGUNTARLE AL USUARIO EL TIPO DE PASAJE QUE DESEA SELECCIONAR
   function select() {
@@ -88,9 +88,6 @@
         console.log("El valor ingresado no es válido.");
       }
   const destinoSelected = valorDestino;
-
-  // CANTIDAD DE PASAJEROS A VIAJAR
-      let cantPasajeros = isNaN(prompt("Por favor, indiquenos la cantidad de pasajeros a viajar"));
 
   // FUNCIÓN PARA ENCONTRAR UNA AEROLÍNEA QUE COINCIDA CON EL NRO INDICADO EN EL DESTINO
     let nameAir;
