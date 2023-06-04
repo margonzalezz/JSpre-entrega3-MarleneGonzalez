@@ -48,8 +48,8 @@ let numeroPasajeElegido = parseInt(prompt("Ingrese el Id numérico asignado al b
 
   const pasajeElegido = contenedorPasajes.find((pasaje) => pasaje.Id === numeroPasajeElegido);
     if (pasajeElegido) {
-      console.log("✅Felicitaciones, tu pasaje fue reservado con éxito.");
+      alert("✅Felicitaciones, tu pasaje fue reservado con éxito.");
     } else {
-      console.log("❌Lo sentimos, tu boleto no fue reservado con éxito." + "\n" +
+      alert("❌Lo sentimos, tu boleto no fue reservado con éxito." + "\n" +
       "Por favor, repita el proceso de reserva nuevamente.");
     }
