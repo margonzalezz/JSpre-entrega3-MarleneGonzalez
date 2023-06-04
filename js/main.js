@@ -110,44 +110,39 @@
     const airEncontrada = encontrarAerolinea(destino);
 
   //CONSTRUCTOR DEL PASAJE
-      class Pasaje {
-        constructor(tipoPasaje, origen, destino, aerolinea, precio) {
-          this.tipoDePasaje = tipoPasaje;
-          this.origen = origen;
-          this.destino = destino;
-          this.aerolinea = aerolinea;
-          this.precio = precio;
-        }
+  class Pasaje {
+    static contadorId = 1;
+
+    constructor(tipoPasaje, origen, destino, aerolinea, precio) {
+      this.id = Pasaje.contadorId++;
+      this.tipoDePasaje = tipoPasaje;
+      this.origen = origen;
+      this.destino = destino;
+      this.aerolinea = aerolinea;
+      this.precio = precio;
+    }
+  }
+  const contenedorPasajes = [];
+  airEncontrada.forEach(aerolinea => {
+    const pasaje = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolinea.aerolinea, aerolinea.precio);
+    contenedorPasajes.push({})
+  });
+    //ACÁ IBAN LAS NUEVAS INSTANCIAS DE Pasaje.
+
+  // CALCULAR IMPUESTO PAÍS
+  const impuesto = ((aerolineas.precio * 37) / 100);
+  let importeTotalImp;
+  let importeTotal;
+    function impuestoPais() {
+      if (origenSelected == 1 || origenSelected == 7 || origenSelected == 8) {
+        importeTotalImp = (Pasaje.precio + impuesto);
+      } else {
+        importeTotal = Pasaje.precio;
       }
-      const contenedorPasajes = [];
-      
-      aerolineas.forEach(destino => {
-        const pasaje = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, airEncontrada.aerolinea, airEncontrada.precio);
-        contenedorPasajes.push(pasaje);
-      });
-      // // Mostrar las nuevas instancias de Pasaje
-      contenedorPasajes.forEach(pasaje => {console.log(pasaje)});
+    }
+  // // Mostrar las nuevas instancias de Pasaje
+  contenedorPasajes.forEach(pasaje => {console.log(pasaje)});
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //FUNCIÓN PARA CALCULAR UN IMPUESTO PAÍS 
-  // const impuesto = ((aerolineas.precio * 37) / 100)
-  // function impuestoPaís() {
-  //   if (origenSeleccionado == 1 || origenSeleccionado == 7 || origenSeleccionado == 8) {
-  //     //PRECIO SUBTOTAL DEL PASAJE + impuesto = TOTAL DEL PASAJE
-  //   }
-  // }

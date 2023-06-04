@@ -1,6 +1,4 @@
 
-// PUEDO USAR EL RESULTADO DE LA FUNCIÓN select() para ir armando el objeto
-
 // class Producto {
 //     constructor(nombre, precio) {
 //         this.nombre  = nombre.toUpperCase();
@@ -36,31 +34,26 @@
   
 //   const pasaje = new Pasaje(destinoSeleccionado.lugar, aerolineaSeleccionada, precioSeleccionado);
 //   console.log(pasaje);
-
+/*
+  //CONSTRUCTOR DEL PASAJE
   class Pasaje {
-  constructor(tipoPasaje, origen, destino, aerolinea) {
-    this.tipoPasaje = tipoPasaje;
-    this.origen = origen;
-    this.destino = destino;
-    this.air = aerolinea;
+    constructor(tipoPasaje, origen, destino, aerolinea, precio) {
+      this.tipoDePasaje = tipoPasaje;
+      this.origen = origen;
+      this.destino = destino;
+      this.aerolinea = aerolinea;
+      this.precio = precio;
+    }
   }
-}
+  const contenedorPasajes = [];
   
-//const Pasaje1 = new Pasaje (opcionSeleccionada, origenSeleccionado.lugar, destinoSeleccionado.lugar, airSeleccionada);
-    
-// Array para almacenar las nuevas instancias de Pasaje
-const contenedorPasajes = [];
+  aerolineas.forEach(destino => {
+    const pasaje = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, airEncontrada.aerolinea, airEncontrada.precio);
+    contenedorPasajes.push(pasaje);
+  });
+  // // Mostrar las nuevas instancias de Pasaje
+  contenedorPasajes.forEach(pasaje => {console.log(pasaje)});
 
-// Crear nuevas instancias de Pasaje para cada destino
-destinosSeleccionados.forEach(destino => {
-  const pasaje = new Pasaje(opcionSeleccionada, origenSeleccionado, destino, aerolineaSeleccionada);
-  contenedorPasajes.push(pasaje);
-});
-
-// Mostrar las nuevas instancias de Pasaje
-contenedorPasajes.forEach(pasaje => {
-  console.log(pasaje);
-});
 
 
 
