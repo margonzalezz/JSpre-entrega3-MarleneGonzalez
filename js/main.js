@@ -56,7 +56,7 @@
       selectOrigen(lugares);
   // FUNCIÓN PARA QUE EL USUARIO ELIJA EL ORIGEN
     function eleccionOrigen() {
-        let origen = parseInt(prompt("Por favor, ingrese el número asignado a su origen"));
+        let origen = parseInt(prompt("Por favor, ingrese un número del 1 al 8 asignado a su lugar de partida: "));
           if (!isNaN(origen)) {
             let origenSeleccionado = lugares.find(lugar => lugar.numero === origen);
               if (origenSeleccionado) {
@@ -76,7 +76,7 @@
   let destinoSeleccionado;
   let destino;
   let valorDestino;
-    destino = parseInt(prompt("Por favor, ingrese el número asignado al destino al que desea viajar"));
+    destino = parseInt(prompt("Por favor, ingrese un número del 1 al 8 asignado al destino al que desea viajar: "));
     if (!isNaN(destino)) {
         let destinoSeleccionado = lugares.find(lugar => lugar.numero === destino);
           if (destinoSeleccionado) {
@@ -101,4 +101,3 @@
           return coincidencia;
     }
     const airEncontrada = encontrarAerolinea(destino);
-    
