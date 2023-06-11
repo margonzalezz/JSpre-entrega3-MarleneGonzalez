@@ -11,7 +11,6 @@ function botonTipoIda() {
     })
 }
 botonTipoIda();
-
 function botonTipoIyV() {
     botonIdaVuelta.addEventListener("click", (e) =>{
         tipoPasaje = "ida_y_vuelta";
@@ -19,3 +18,23 @@ function botonTipoIyV() {
     })
 }
 botonTipoIyV();
+
+// CONECCIÓN PARA SELECCIONAR EL ORIGEN
+
+const seleccionOrigen = document.getElementById("seleccionOrigen");
+const seleccionDestino = document.getElementById("seleccionDestino");
+const selectedOrigin = "";
+
+function changeOrigen() {
+    seleccionOrigen.addEventListener("change", (e) => {
+        selectedOrigin = e.target.value;
+        alert("Opción seleccionada:", selectedOption);
+    })
+}
+
+changeOrigen();
+
+
+
+
+

@@ -42,7 +42,10 @@
             }
 }
 
-
+button:disabled {
+    background-color: gray;
+    color: white;
+}
 
 .selectOrigen label::before{
     content: url(../img/icon/despegue.png);
