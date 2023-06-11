@@ -21,18 +21,19 @@ function obtenerTipoPasaje() {      //función obtenerTipoPasaje para almacenar 
 }
 obtenerTipoPasaje();
 
-// CONECCIÓN PARA SELECCIONAR EL ORIGEN
+// CONECCIÓN PARA SELECCIONAR EL ORIGEN Y DESTINO
 const seleccionOrigen = document.getElementById("seleccionOrigen");
 const seleccionDestino = document.getElementById("seleccionDestino");
 let selectedOrigin = "";
 let selectedDestiny = "";
-
+//  ORIGEN
 function changeOrigen() {
     seleccionOrigen.addEventListener("change", (e) => {
         selectedOrigin = e.target.value;
         alert("Opción seleccionada:" + selectedOrigin);
     })
 }
+//  DESTINO
 changeOrigen();
 function changeDestino() {
     seleccionDestino.addEventListener("change", (e) => {
@@ -72,6 +73,15 @@ function obtenerFechaRegreso() {
     inputRegreso.addEventListener("input", (e) => {
         valorFechaRegreso = e.target.value;
         alert("La fecha de regreso seleccionada es: " + valorFechaRegreso);
-    })
-    
+    }) 
 }
+
+obtenerFechaRegreso();
+
+
+
+
+
+
+
+

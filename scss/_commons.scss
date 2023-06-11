@@ -25,14 +25,24 @@
                     }
 
                     .selectIda{
-                        background-color: $DarkBlue;
-                        width: 50%;
-                        display: flex;
-                        justify-content: center;
-                        border-right: $white;
-                        margin-right: 1%;
-                        border-radius: 5px
+                            background-color: $DarkBlue;
+                            width: 50%;
+                            display: flex;
+                            justify-content: center;
+                            border-right: $white;
+                            margin-right: 1%;
+                            border-radius: 5px;
+                            cursor: pointer;
 
+                        &:hover{
+                            background-color:$darkestBlue;
+
+                            button {
+                                &:hover{
+                                    background-color:$darkestBlue;
+                                }   
+                            }
+                        }     
                     }
 
                     .select-idaYvuelta{
@@ -42,10 +52,6 @@
             }
 }
 
-button:disabled {
-    background-color: gray;
-    color: white;
-}
 
 .selectOrigen label::before{
     content: url(../img/icon/despegue.png);
@@ -59,6 +65,7 @@ button:disabled {
 }
 
 .buscarVuelos{
+    cursor:pointer;
 
         button{
             border: none;

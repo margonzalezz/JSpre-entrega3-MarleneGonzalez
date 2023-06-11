@@ -53,3 +53,23 @@ let numeroPasajeElegido = parseInt(prompt("Ingrese el Id numérico asignado al b
       alert("❌Lo sentimos, tu boleto no fue reservado con éxito." + "\n" +
       "Por favor, repita el proceso de reserva nuevamente.");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,6 +32,13 @@
   border-right: white;
   margin-right: 1%;
   border-radius: 5px;
+  cursor: pointer;
+}
+.selectViaje .seleccionTipoPasaje .selectIda:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover {
+  background-color: #013744;
+}
+.selectViaje .seleccionTipoPasaje .selectIda:hover button:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover button:hover {
+  background-color: #013744;
 }
 .selectOrigen label::before {
   content: url(../img/icon/despegue.png);
@@ -45,6 +52,9 @@
   content: url(../img/icon/asiento.png);
 }
 
+.buscarVuelos {
+  cursor: pointer;
+}
 .buscarVuelos button {
   border: none;
   border-radius: 20px;
@@ -102,7 +112,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(82, 82, 82, 0.8784313725);
-  transition: all 90ms ease-out;
+  transition: all 400ms ease-out;
   opacity: 1;
   visibility: hidden;
 }
