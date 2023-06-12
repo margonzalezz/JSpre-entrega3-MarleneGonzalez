@@ -1,38 +1,41 @@
+const form = document.getElementById("containerViaje");
+let reserva;
 
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        const botonIda = document.getElementById("botonIda");
+        const botonIdaVuelta = document.getElementById("botonIdaVuelta");
+        const seleccionOrigen = document.getElementById("seleccionOrigen").value;
+        const seleccionDestino = document.getElementById("seleccionDestino").value;
+        const inputPasajeros = document.getElementById("inputPasajeros").value;
+        const inputPartida = document.getElementById("inputPartida").value;
+        const inputRegreso = document.getElementById("inputRegreso").value;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (seleccionOrigen == "" || seleccionDestino == "" || inputPasajeros == "" || inputPartida == "" || inputRegreso == "") {
+            alert("Por favor, complete todos los campos")
+        }
+        if (botonIda.checked) {
+             reserva = {
+                pasaje: botonIda.value,
+                origen: seleccionOrigen,
+                destino: seleccionDestino,
+                pasajeros: inputPasajeros,
+                partida: inputPartida
+            }
+            console.log(reserva);
+        } else if (botonIdaVuelta.checked) {
+             reserva = {
+                pasaje: botonIdaVuelta.value,
+                origen: seleccionOrigen, 
+                destino: seleccionDestino,
+                pasajeros: inputPasajeros,
+                partida: inputPartida,
+                regreso: inputRegreso
+            }
+        }
+        console.log(reserva);
+    })
+/*
 //EL TIPO DE PASAJE NO REALIZA NINGUNA ACCIÓN MÁS QUE ALMACENAR EL 
 //VALOR PARA CONSTRUIR EL PASAJE
 
@@ -66,7 +69,7 @@ function selectFechaRegreso () {
 }
 selectFechaPartida();
 selectFechaRegreso();
-
+*/
 
 
 
