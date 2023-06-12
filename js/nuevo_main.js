@@ -1,3 +1,38 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //EL TIPO DE PASAJE NO REALIZA NINGUNA ACCIÓN MÁS QUE ALMACENAR EL 
 //VALOR PARA CONSTRUIR EL PASAJE
 

@@ -197,18 +197,15 @@
   </div>
 
     <!-- INICIA FORM PARA ELEGIR DESTINOS -->
-  <section class="selectViaje" id="containerViaje">
-    <!-- BOTONES PARA SELECCIONAR IDA/VUELTA -->
+  <form class="selectViaje" id="containerViaje">
     <div class="seleccionTipoPasaje" id="botonSeleccionTipo">
       <div class="selectIda"> 
-        <a href="#">          
-          <button id="botonIda">Sólo Ida</button>
-        </a>
+        <input type="radio" name="pasajes" id="botonIda" value="solo_ida"> Solo ida </input>
+          <!-- <button id="botonIda">Sólo Ida</button> -->
       </div>
       <div class="select-idaYvuelta">
-        <a href="#">
-          <button id="botonIdaVuelta">Ida y vuelta</button>
-        </a>
+        <input type="radio" name="pasajes" id="botonIdaVuelta" value="ida_y_vuelta"> Ida y vuelta </input>
+          <!-- <button id="botonIdaVuelta">Ida y vuelta</button> -->
       </div>  
     </div>
 
@@ -263,7 +260,7 @@
           <button>Buscar vuelos</button>
         </a>
       </div>
-  </section>
+    </form>
 
   <section class="text-principal">  
     <h1 class="text-center">Volá con tranquilidad</h1>

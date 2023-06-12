@@ -29,10 +29,15 @@
   width: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-right: white;
   margin-right: 1%;
   border-radius: 5px;
   cursor: pointer;
+  color: white;
+}
+.selectViaje .seleccionTipoPasaje .selectIda input[type=radio i], .selectViaje .seleccionTipoPasaje .select-idaYvuelta input[type=radio i] {
+  margin-right: 10px;
 }
 .selectViaje .seleccionTipoPasaje .selectIda:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover {
   background-color: #013744;
@@ -317,7 +322,9 @@ nav {
   }
   .selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
     align-items: center;
-    height: 60%;
+    object-fit: cover;
+    height: 6vh;
+    font-weight: bold;
   }
   .text-principal h1 {
     font-size: 2.5rem;

@@ -29,11 +29,16 @@
                             width: 50%;
                             display: flex;
                             justify-content: center;
+                            align-items: center;
                             border-right: $white;
                             margin-right: 1%;
                             border-radius: 5px;
                             cursor: pointer;
+                            color:$white;
 
+                            input[type="radio" i] {
+                                 margin-right: 10px;
+                             }
                         &:hover{
                             background-color:$darkestBlue;
 
@@ -44,11 +49,9 @@
                             }
                         }     
                     }
-
                     .select-idaYvuelta{
                         @extend .selectIda;
                     }
-
             }
 }
 

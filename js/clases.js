@@ -15,7 +15,6 @@
   let aerolineaSeleccionada;
 
 airEncontrada.forEach((aerolinea) => {
-
       let precioPasaje = aerolinea.precio;
 
       if (origenSelected.includes("Argentina")) {
@@ -31,12 +30,10 @@ airEncontrada.forEach((aerolinea) => {
             if (origenSelected.includes("Argentina")) {
               precioDoble += precioDoble * 0.40; // Precio incrementado si es ida y vuelta y viaja desde Argentina
             }
-
             const pasajeIncrementado = new Pasaje(opcionSeleccionada, origenSelected, destinoSelected, aerolineaSeleccionada.aerolinea, precioDoble);
             contenedorPasajes.push(pasajeIncrementado);
             console.log(pasajeIncrementado);
           }
-
 });
       if (opcionSeleccionada !== "IdaYVuelta") {
         contenedorPasajes.forEach((pasaje) => {

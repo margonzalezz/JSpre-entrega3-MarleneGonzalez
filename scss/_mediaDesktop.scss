@@ -108,7 +108,10 @@
 
                  .selectIda{
                     align-items: center;
-                    height: 60%;
+                    object-fit: cover;
+                    height: 6vh;
+                    font-weight: bold;
+
                 }               
             }
 
