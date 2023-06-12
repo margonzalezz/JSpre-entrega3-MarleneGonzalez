@@ -13,17 +13,20 @@ function validacionDestino() {
 validacionDestino();
 //  VALIDACION DE CANTIDAD DE PASAJEROS
 function validacionPasajeros() {
+    cantPasajeros();
     valorPasajeros >= 1 ? true : alert("Por favor, ingrese una cantidad válida");
 }
 //  VALIDACION DE FECHAS DE PARTIDA Y DE REGRESO 
 let fechaActual = new Date();
 
 function selectFechaPartida() {
+    obtenerFechaPartida();
     valorFechaPartida > fechaActual ? true : alert("Por favor, ingrese una fecha válida");
 }
 
 //  FECHA DE PARTIDA: 
 function selectFechaRegreso () {
+    obtenerFechaRegreso();
     valorFechaRegreso >= fechaActual && valorFechaRegreso > valorFechaPartida ? true : alert("Por favor, ingrese una fecha válida");
 }
 selectFechaPartida();

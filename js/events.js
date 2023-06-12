@@ -26,15 +26,28 @@ const seleccionOrigen = document.getElementById("seleccionOrigen");
 const seleccionDestino = document.getElementById("seleccionDestino");
 let selectedOrigin = "";
 let selectedDestiny = "";
+
+// VALIDACION DE ORIGEN
+function validacionOrigen() {
+    if (selectedOrigin < 1) {
+        alert("Por favor, seleccione un origen")
+    } 
+    //selectedOrigin >= 1 ? true : alert("Por favor, seleccione un origen");
+}
 //  ORIGEN
 function changeOrigen() {
     seleccionOrigen.addEventListener("change", (e) => {
         selectedOrigin = e.target.value;
         alert("Opción seleccionada:" + selectedOrigin);
+validacionOrigen();
+
+
     })
 }
-//  DESTINO
 changeOrigen();
+
+validacionOrigen();
+//  DESTINO
 function changeDestino() {
     seleccionDestino.addEventListener("change", (e) => {
         selectedDestiny = e.target.value;
