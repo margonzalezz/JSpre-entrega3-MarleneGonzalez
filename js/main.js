@@ -1,103 +1,60 @@
-// FUNCION PARA ELEGIR EL DESTINO Y SI ES IDA SOLO O IDA Y VUELTA
-  let nombre = prompt("Por favor, ingrese su nombre");
-  let selectIdaYvuelta;
+//  -------------ARRAYS--------------
+const lugares = [
+    {numero: 1, lugar: "Buenos Aires, Argentina" },         //Iberia - AmAirlines - Aerolineas Argentinas 
+    {numero: 2, lugar: "New york, Estados Unidos" } ,       //Iberia - AmAirlines - Aerolíneas Argentinas
+    {numero: 3, lugar: "Venecia, Italia"} ,                 //Iberia - AmAirlines - Aerolíneas Argentinas 
+    {numero: 4, lugar: "Ibiza, España"} ,                   //Iberia - Aerolíneas Argentinas 
+    {numero: 5, lugar: "Paris, Francia"} ,                  //Iberia - AmAirlines
+    {numero: 6, lugar: "Mykonos, Grecia"} ,                 //Iberia - AmAirlines 
+    {numero: 7, lugar: "Bariloche, Argentina"} ,            //Iberia - AmAirlines - Aerolíneas Argentinas
+    {numero: 8, lugar: "Cataratas de Iguazú, Argentina"}];  //Iberia - AmAirlines - Aerolíneas Argentinas
 
-    // FUNCIÓN PARA CUANDO EL USUARIO SÓLO QUIERE VIAJAR DE IDA
-    let fechaIda;
-    let fechaIngrIda;
-    let fechaActual;
-      function soloIda() {
-        fechaIda = prompt("📅 Ingrese la fecha de partida con el formato (dd/mm/aaaa): ");
-        fechaIngrIda = new Date(fechaIda);
-        fechaActual = new Date();
-          while (fechaIngrIda < fechaActual) {
-            alert("Por favor, ingrese una fecha válida");}
-          }
-    // FUNCIÓN PARA CUANDO EL USUARIO QUIERE REGRESAR
-    let fechaRegreso;
-    let fechaIngRegreso;
-    function regreso() {
-      fechaRegreso = prompt("📅 Ingrese la fecha de regreso con el formato (dd/mm/aaaa): ");
-      fechaIngRegreso = new Date(fechaRegreso);
-      fechaActual = new Date();
-        while (fechaIngRegreso < fechaActual || fechaIngRegreso < fechaIngrIda) {
-          alert("Por favor, ingrese una fecha válida");}
-        }
+    const aerolineas = [
+        {aerolinea: "Aerolíneas Argentinas", precio: 250000, habilitado:[1, 2, 3, 4, 7, 8] } ,
+        {aerolinea: "Iberia", precio: 280000, habilitado: [1, 2, 3, 4, 5, 6, 7, 8] } ,
+        {aerolinea: "American Airlines", precio: 305000, habilitado: [1, 2, 3, 5, 6, 7, 8] }];
+//------------EVENTOS---------------------
+document.getElementById('botonIda').addEventListener('click', () => {inputRegreso.disabled = true});
+document.getElementById('botonIdaVuelta').addEventListener('click', () => {inputRegreso.disabled = false});
+const form = document.getElementById("containerViaje");
+let idPasajes = 1;
 
-  // FUNCION PARA PREGUNTARLE AL USUARIO EL TIPO DE PASAJE QUE DESEA SELECCIONAR
-  function select() {
-    let selectIda = confirm("Hola, " + nombre + " ¿Deseas reservar un asiento sólo de ida? ⬆" + "\nSi es así, presiona Aceptar para continuar")
-      if (selectIda == true) {
-        alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda ✈");
-          soloIda();
-          resultado = { tipo:"Ida"};
-      } else {
-          selectIdaYvuelta = confirm(nombre + "¿Deseas reservar un asiento de ida y vuelta? ↕" + "\nSi es así, presiona Aceptar para continuar")
-          if (selectIdaYvuelta == true) {
-            alert("A continuación, selecciona las opciones que más se adapten a tu búsqueda ✈");
-              soloIda();
-              regreso();
-              resultado = { tipo:"IdaYVuelta"};
-          } else{
-            alert("No dudes en regresar cuando decidas tu viaje :)")
-            return;
-          }
-      }
-          return resultado.tipo;
-        }
-  const opcionSeleccionada = select();  //Me devuelve lo que eligió el usuario ida o ida-y-vuelta alert(opcionSeleccionada)
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const botonIda = document.getElementById("botonIda");
+  const botonIdaVuelta = document.getElementById("botonIdaVuelta");
+  const seleccionOrigen = document.getElementById("seleccionOrigen").value;
+  const seleccionDestino = document.getElementById("seleccionDestino").value;
+  const inputPasajeros = document.getElementById("inputPasajeros").value;
+  const inputPartida = document.getElementById("inputPartida").value;
+  const inputRegreso = document.getElementById("inputRegreso").value;
 
-      //FUNCIÓN PARA QUE EL USUARIO ELIJA ENTRE ALGUNOS DE LOS SIGUIENTES ORIGENES PREDETERMINADOS
-      function selectOrigen(origenes) {
-        for (let i = 0; i < origenes.length; i++) {
-          console.log(origenes[i].numero + ". " + origenes[i].lugar);  //ITERA EL ARRAY Y VA MOSTRANDO CADA RESULTADO CON SU NRO CORRESPONDIENTE
-        }
-      }
-      selectOrigen(lugares);
-  // FUNCIÓN PARA QUE EL USUARIO ELIJA EL ORIGEN
-    function eleccionOrigen() {
-        let origen = parseInt(prompt("Por favor, ingrese un número del 1 al 8 asignado a su lugar de partida: "));
-          if (!isNaN(origen)) {
-            let origenSeleccionado = lugares.find(lugar => lugar.numero === origen);
-              if (origenSeleccionado) {
-                alert("Usted quiere viajar desde: " + origenSeleccionado.lugar);  
-                valorOrigen = { eleccion: origenSeleccionado.lugar};
-              } else {
-                alert("El origen seleccionado no es válido");
-              }
-          } else {
-            console.log("El valor ingresado no es válido.");
-          }
-          return valorOrigen.eleccion;
-    }
-    const origenSelected = eleccionOrigen(); //ME DEVUELVE QUE ORIGEN ELIGIÓ EL USUARIO
+  if (seleccionOrigen === "" || seleccionDestino === "" || inputPasajeros === "" || inputPartida === "") {
+    alert("Por favor, complete todos los campos");
+    return;
+  }
+  const aerolineasEncontradas = aerolineas.filter(aerolinea => aerolinea.habilitado.includes(Number(seleccionDestino)));
+  const reservas = aerolineasEncontradas.map(aerolinea => {
+        const precio = botonIdaVuelta.checked ? aerolinea.precio * 2 : aerolinea.precio;
+        const precioFinal = [1, 7, 8].includes(Number(seleccionOrigen)) ? (precio * 1.4) : precio;
+        const precioFinalPasajeros = inputPasajeros > 1 ? (precioFinal * inputPasajeros) : precioFinal;
+        return {
+        pasaje: botonIda.checked ? botonIda.value : botonIdaVuelta.value,
+        id: idPasajes++,
+        origen: seleccionOrigen,
+        destino: seleccionDestino,
+        pasajeros: inputPasajeros,
+        partida: inputPartida,
+        regreso: inputRegreso,
+        aerolinea: aerolinea.aerolinea,
+        precio: precioFinalPasajeros,
+        };
+  });
+  // reservas ES EL ARRAY QUE CONTIENE LOS PASAJES CREADOS
+  reservas.forEach(reserva => {
+    console.log(reserva);
+  });
+});
 
-  // FUNCIÓN PARA QUE EL USUARIO ELIJA EL DESTINO
-  let destinoSeleccionado;
-  let destino;
-  let valorDestino;
-    destino = parseInt(prompt("Por favor, ingrese un número del 1 al 8 asignado al destino al que desea viajar: "));
-    if (!isNaN(destino)) {
-        let destinoSeleccionado = lugares.find(lugar => lugar.numero === destino);
-          if (destinoSeleccionado) {
-            alert("Usted quiere viajar a: " + destinoSeleccionado.lugar); 
-            valorDestino = destinoSeleccionado.lugar;
-          } else {
-            alert("El destino seleccionado no está disponible.");
-          }
-      } else {
-        console.log("El valor ingresado no es válido.");
-      }
-  const destinoSelected = valorDestino;
 
-  // FUNCIÓN PARA ENCONTRAR UNA AEROLÍNEA QUE COINCIDA CON EL NRO INDICADO EN EL DESTINO
-    let nameAir;
-    function encontrarAerolinea(destino) { // recibimos el objeto destino
-     let numeroLugar = destino; // accedemos al número
-        const coincidencia = aerolineas.filter(aerolinea =>aerolinea.habilitado.includes(numeroLugar));
-        if(coincidencia == true) {
-          nameAir = (coincidencia.aerolinea.precio);
-        } 
-          return coincidencia;
-    }
-    const airEncontrada = encontrarAerolinea(destino);
+
