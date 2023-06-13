@@ -34,27 +34,40 @@ form.addEventListener("submit", (e) => {
     return;
   }
   const aerolineasEncontradas = aerolineas.filter(aerolinea => aerolinea.habilitado.includes(Number(seleccionDestino)));
-  const reservas = aerolineasEncontradas.map(aerolinea => {
-        const precio = botonIdaVuelta.checked ? aerolinea.precio * 2 : aerolinea.precio;
-        const precioFinal = [1, 7, 8].includes(Number(seleccionOrigen)) ? (precio * 1.4) : precio;
-        const precioFinalPasajeros = inputPasajeros > 1 ? (precioFinal * inputPasajeros) : precioFinal;
-        return {
-        pasaje: botonIda.checked ? botonIda.value : botonIdaVuelta.value,
-        id: idPasajes++,
-        origen: seleccionOrigen,
-        destino: seleccionDestino,
-        pasajeros: inputPasajeros,
-        partida: inputPartida,
-        regreso: inputRegreso,
-        aerolinea: aerolinea.aerolinea,
-        precio: precioFinalPasajeros,
-        };
-  });
+const reservas = aerolineasEncontradas.map(aerolinea => {
+    const fechaPartida = new Date(inputPartida);
+    const fechaRegreso = new Date(inputRegreso);
+    const tiempoViaje = Math.ceil((fechaRegreso - fechaPartida) / (1000 * 60 * 60 * 24));
+      const lugarOrigen = lugares.find(lugar => lugar.numero === Number(seleccionOrigen));
+      const lugarDestino = lugares.find(lugar => lugar.numero === Number(seleccionDestino));
+      const precio = botonIdaVuelta.checked ? aerolinea.precio * 2 : aerolinea.precio;
+      const precioFinal = [1, 7, 8].includes(Number(seleccionOrigen)) ? (precio * 1.4) : precio;
+      const precioFinalPasajeros = inputPasajeros > 1 ? (precioFinal * inputPasajeros) : precioFinal;
+
+  return {
+    pasaje: botonIda.checked ? botonIda.value : botonIdaVuelta.value,
+    id: idPasajes++,
+    origen: lugarOrigen.lugar,
+    destino: lugarDestino.lugar,
+    pasajeros: inputPasajeros,
+    partida: inputPartida,
+    regreso: inputRegreso,
+    aerolinea: aerolinea.aerolinea,
+    precio: precioFinalPasajeros,
+    diasViaje: tiempoViaje,
+  };
+});
   // reservas ES EL ARRAY QUE CONTIENE LOS PASAJES CREADOS
   reservas.forEach(reserva => {
     console.log(reserva);
   });
 });
 
+
+
+// Cálculo de la cantidad de días de viaje
+const fechaPartida = new Date(inputPartida);
+const fechaRegreso = new Date(inputRegreso);
+const tiempoViaje = Math.ceil((fechaRegreso - fechaPartida) / (1000 * 60 * 60 * 24));
 
 
