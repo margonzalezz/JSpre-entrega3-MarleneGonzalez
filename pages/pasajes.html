@@ -169,31 +169,33 @@
   <!-- CUERPO DEL HTML -->
 
   <section id="container-pasajes">
-    <div id="logoAerolinea">
-      <img src="../img/icon/aero-argentina.png" alt="logo de la aerolínea">
-    </div>
-    <div id="seccion-ida">
-      <span class="titulo">IDA</span>
-      <p>mier. 14 junio 2023</p>
-    </div>
-    <div id="seccion-idaYvuelta">
-      <span class="titulo">REGRESO</span>
-      <p>sab. 24 junio 2023</p>
-    </div>
-    <div id="container-dias">
-      <p>10 días</p>
-    </div>
-    <div id="container-precio">
+    <div id="grid-pasajes">
+      <div id="logoAerolinea" class="logo">
+        <img src="../img/icon/aero-argentina.png" alt="logo de la aerolínea">
+      </div>
+      <div id="seccion-ida" class="ida">
+        <span class="titulo-ida">IDA</span>
+        <p class="fecha-ida">mier. 14 junio 2023</p>
+      </div>
+      <div id="seccion-idaYvuelta" class="vuelta">
+        <span class="titulo-vuelta">REGRESO</span>
+        <p class="fecha-vuelta">sab. 24 junio 2023</p>
+      </div>
+      <div id="container-dias" class="dias">
+        <p>10 días</p>
+      </div>
+      <div id="container-precio" class="precio">
         <div class="precio-pasaje">
           <span class="titulo">PRECIO</span>
           <p>PRECIO$$$</p>      
         </div>
-     <button>Seleccionar</button>
+      </div>
+      <div class="seleccionar-pasaje" id="seleccionarBoleto">
+        <button>Seleccionar</button>
+      </div>
     </div>
   </section>
-
-
-
+  
 
 <!-- TIPO DE PASAJE: IDA  / IDA-VUELTA
 ORIGEN

@@ -169,56 +169,76 @@ footer {
   display: none;
 }
 
-#container-pasajes {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background-color: #013744;
-  color: white;
-}
-#container-pasajes #logoAerolinea {
-  width: 10%;
-  display: flex;
-  align-items: center;
-}
-#container-pasajes #logoAerolinea img {
-  object-fit: cover;
-  height: 30%;
-}
-#container-pasajes #seccion-ida, #container-pasajes #container-precio, #container-pasajes #container-dias, #container-pasajes #seccion-idaYvuelta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  width: 20%;
-}
-#container-pasajes #seccion-ida p, #container-pasajes #container-precio p, #container-pasajes #container-dias p, #container-pasajes #seccion-idaYvuelta p {
-  font-size: 0.8rem;
-}
-#container-pasajes #container-dias {
-  width: 13%;
-  display: flex;
-  padding: 0% 5%;
-  justify-content: center;
-}
-#container-pasajes #container-precio {
-  width: 23%;
-  padding: 2% 2%;
-}
-#container-pasajes #container-precio .precio-pasaje {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.8rem;
-}
-#container-pasajes #container-precio button {
+#grid-pasajes {
+  display: grid;
+  grid-template-areas: "logo dias" "ida vuelta" "precio seleccion";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  width: 70%;
+  margin-left: 15%;
   background-color: #06657c;
   color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
 }
-#container-pasajes #container-precio button:hover {
+#grid-pasajes:hover {
+  transition: 0.5s ease-in;
+  box-shadow: 2px 20px 60px rgb(1, 55, 68);
+}
+
+.logo {
+  grid-area: logo;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 25%;
+  padding-top: 5%;
+}
+
+.dias {
+  grid-area: dias;
+  border-bottom: solid;
+  border-width: 0.5px;
+  border-color: #b6ced4;
+  padding-left: 30%;
+  padding-top: 15%;
+}
+
+.ida {
+  grid-area: ida;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 25%;
+  padding-top: 5%;
+}
+
+.vuelta {
+  grid-area: vuelta;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 15%;
+  padding-top: 5%;
+}
+
+#container-precio {
+  grid-area: precio;
+  padding-left: 15%;
+  padding-top: 5%;
+}
+
+#seleccionarBoleto {
+  grid-area: seleccion;
+  padding-left: 10%;
+  padding-top: 15%;
+}
+#seleccionarBoleto button {
+  border: none;
+  color: white;
+  background-color: #013744;
+  border-radius: 5px;
+  padding: 4% 3%;
+}
+#seleccionarBoleto button:hover {
   background-color: #69adbe;
 }
 

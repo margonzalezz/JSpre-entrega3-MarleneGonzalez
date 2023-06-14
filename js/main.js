@@ -60,6 +60,7 @@ const reservas = aerolineasEncontradas.map(aerolinea => {
   // reservas ES EL ARRAY QUE CONTIENE LOS PASAJES CREADOS
   reservas.forEach(reserva => {
     console.log(reserva);
+    window.location.assign("../pages/pasajes.html");
   });
 });
 
