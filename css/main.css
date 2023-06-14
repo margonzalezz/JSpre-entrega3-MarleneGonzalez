@@ -226,19 +226,19 @@ footer {
   padding-top: 5%;
 }
 
-#seleccionarBoleto {
+.seleccionar-pasaje {
   grid-area: seleccion;
   padding-left: 10%;
   padding-top: 15%;
 }
-#seleccionarBoleto button {
+.seleccionar-pasaje button {
   border: none;
   color: white;
   background-color: #013744;
   border-radius: 5px;
   padding: 4% 3%;
 }
-#seleccionarBoleto button:hover {
+.seleccionar-pasaje button:hover {
   background-color: #69adbe;
 }
 
