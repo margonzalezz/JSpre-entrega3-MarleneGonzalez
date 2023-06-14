@@ -63,11 +63,3 @@ const reservas = aerolineasEncontradas.map(aerolinea => {
   });
 });
 
-
-
-// Cálculo de la cantidad de días de viaje
-const fechaPartida = new Date(inputPartida);
-const fechaRegreso = new Date(inputRegreso);
-const tiempoViaje = Math.ceil((fechaRegreso - fechaPartida) / (1000 * 60 * 60 * 24));
-
-
