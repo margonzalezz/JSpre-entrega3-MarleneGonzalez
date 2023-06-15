@@ -173,15 +173,17 @@ footer {
   display: grid;
   grid-template-areas: "logo dias" "ida vuelta" "precio seleccion";
   grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr;
   width: 70%;
   margin-left: 15%;
+  margin-top: 4%;
+  margin-bottom: 2%;
   background-color: #06657c;
   color: white;
 }
 #grid-pasajes:hover {
   transition: 0.5s ease-in;
-  box-shadow: 2px 20px 60px rgb(1, 55, 68);
+  box-shadow: 2px 10px 60px rgb(1, 55, 68);
 }
 
 .logo {
@@ -191,6 +193,10 @@ footer {
   border-color: #b6ced4;
   padding-left: 25%;
   padding-top: 5%;
+}
+.logo span {
+  font-size: 0.8rem;
+  margin-right: 5%;
 }
 
 .dias {
@@ -207,7 +213,7 @@ footer {
   border-bottom: solid;
   border-width: 1px;
   border-color: #b6ced4;
-  padding-left: 25%;
+  padding-left: 15%;
   padding-top: 5%;
 }
 
@@ -398,6 +404,73 @@ nav {
     object-fit: cover;
     height: 6vh;
     font-weight: bold;
+  }
+  #grid-pasajes {
+    display: grid;
+    grid-template-areas: "logo ida vuelta dias precio seleccion";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr;
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    background-color: #06657c;
+    color: white;
+  }
+  .logo {
+    grid-area: logo;
+    padding-left: 10%;
+    padding-top: 5%;
+    border-width: 2px;
+  }
+  .logo span {
+    font-size: 1rem;
+    margin-right: 5%;
+  }
+  .dias {
+    grid-area: dias;
+    padding-left: 30%;
+    padding-top: 15%;
+    border-width: 2px;
+  }
+  .ida {
+    grid-area: ida;
+    padding-left: 15%;
+    padding-top: 5%;
+    border-width: 2px;
+  }
+  .vuelta {
+    grid-area: vuelta;
+    padding-left: 15%;
+    padding-top: 5%;
+    border-width: 2px;
+  }
+  #container-precio {
+    grid-area: precio;
+    padding-left: 15%;
+    padding-top: 4%;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #b6ced4;
+  }
+  .seleccionar-pasaje {
+    grid-area: seleccion;
+    padding-left: 10%;
+    padding-top: 15%;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #b6ced4;
+  }
+  .seleccionar-pasaje button {
+    border: none;
+    color: white;
+    background-color: #013744;
+    border-radius: 5px;
+    padding: 4% 3%;
+  }
+  .seleccionar-pasaje button:hover {
+    background-color: #69adbe;
   }
   .text-principal h1 {
     font-size: 2.5rem;

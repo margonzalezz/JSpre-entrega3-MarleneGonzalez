@@ -118,6 +118,104 @@
     }
 
 
+    #grid-pasajes {
+        display: grid;
+        grid-template-areas: 
+          "logo ida vuelta dias precio seleccion";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr;
+        width: 70%;
+        height: 100%;
+        margin-left: 15%;
+        margin-top: 4%;
+        margin-bottom: 2%;
+        background-color: $DarkBlue;
+        color: $white;
+      }
+
+      .logo {
+        grid-area: logo;
+        padding-left: 10%;
+        padding-top: 5%;
+        border-width: 2px;
+
+    
+        span{
+            font-size: 1rem;
+            margin-right: 5%;
+        }
+      }
+      
+      .dias {
+        grid-area: dias;
+        padding-left: 30%;
+        padding-top: 15%;
+        border-width: 2px;
+
+      }
+      
+      .ida {
+        grid-area: ida;
+        padding-left: 15%;
+        padding-top: 5%;
+        border-width: 2px;
+
+      }
+      
+      .vuelta {
+        grid-area: vuelta;
+        padding-left: 15%;
+        padding-top: 5%;
+        border-width: 2px;
+
+      }
+      
+      #container-precio {
+        grid-area: precio;
+        padding-left: 15%;
+        padding-top: 4%;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: $lightBlue;
+      }
+      
+      .seleccionar-pasaje {
+        grid-area: seleccion;
+        padding-left: 10%;
+        padding-top: 15%;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: $lightBlue;
+      
+        button {
+          border: none;
+          color: $white;
+          background-color: $darkestBlue;
+          border-radius: 5px;
+          padding: 4% 3%;
+      
+          &:hover {
+            background-color: $mainColor;
+          }
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // TITULO DEL INDEX
     .text-principal{
         h1{

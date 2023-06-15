@@ -206,15 +206,17 @@ footer{
       "ida vuelta"
       "precio seleccion";
     grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr;
     width: 70%;
     margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 2%;
     background-color: $DarkBlue;
     color: $white;
   
     &:hover {
       transition: .5s ease-in;
-      box-shadow: 2px 20px 60px rgb(1, 55, 68);        
+      box-shadow: 2px 10px 60px rgb(1, 55, 68);        
     }
   }
   
@@ -225,6 +227,11 @@ footer{
     border-color: $lightBlue;
     padding-left: 25%;
     padding-top: 5%;
+
+    span{
+        font-size: 0.8rem;
+        margin-right: 5%;
+    }
   }
   
   .dias {
@@ -241,7 +248,7 @@ footer{
     border-bottom: solid;
     border-width: 1px;
     border-color: $lightBlue;
-    padding-left: 25%;
+    padding-left: 15%;
     padding-top: 5%;
   }
   

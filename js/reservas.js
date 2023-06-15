@@ -1,49 +1,46 @@
-// - Primero guardar en localStorage el array reservas.     LISTO
-// - Crear un nuevo js linkeado en vuelos.html.             LISTO
-// - Recibir la data guardada en Storage en el script js linkeado a vuelos.html.
-// - Realizar el proceso de impresión/renderizado en pantalla.
-    
-//localStorage.setItem("misReservas", JSON.stringify(reservas))
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // reservas ES EL ARRAY QUE CONTIENE LOS PASAJES CREADOS. AL MOSTRARLOS ACÁ SE VE PERFECTO
-    const contenedorVuelos = document.getElementById("containerPasajes");
-    reservas.forEach(reserva => {
-      console.log(reserva);
-        const cardsPasajes = document.createElement("div");
+const reservas = JSON.parse(localStorage.getItem("misReservas"));
+let diasVacios = "";
+// Verificar si hay reservas almacenadas
+if (reservas && reservas.length > 0) {
+  const contenedorVuelos = document.getElementById("containerPasajes");
+  reservas.forEach(reserva => {
+    const cardsPasajes = document.createElement("div");
+    // Generar el nombre de la aerolínea y la ruta de la imagen
+    const nombreAerolinea = reserva.aerolinea.toLowerCase().replace(/\s/g, "-");
+    const rutaImagen = `../img/icon/${nombreAerolinea}.png`;
+    // Generar el contenido dinámico para cada reserva
+    cardsPasajes.innerHTML = `
+      <div id="grid-pasajes">
+        <div id="logoAerolinea" class="logo">
+          <img src="${rutaImagen}" alt="${reserva.aerolinea}">
+          <span class="nombreLogoAerolinea">${reserva.aerolinea}</span>
+        </div>
+        <div id="seccion-ida" class="ida">
+          <span class="titulo-ida">IDA</span>
+          <p class="fecha-ida">${reserva.partida}</p>
+        </div>
+        ${reserva.pasaje === "solo_ida" ? "" :
+        `<div id="seccion-idaYvuelta" class="vuelta">
+            <span class="titulo-vuelta">REGRESO</span>
+            <p class="fecha-vuelta">${reserva.regreso}</p>
+        </div>`}
+        ${reserva.pasaje === "solo_ida" ? '' :
+        `<div id="container-dias" class="dias"><p>${reserva.diasViaje + " días"}</p></div>`}
+        <div id="container-precio" class="precio">
+          <div class="precio-pasaje">
+            <span class="titulo">PRECIO</span>
+            <p>${"$" + reserva.precio}</p>      
+          </div>
+        </div>
+        <div class="seleccionar-pasaje" id="${reserva.id}"><button>Seleccionar</button></div>
+      </div>
+    `;
+    contenedorVuelos.appendChild(cardsPasajes);
+  });
+}
 
-        cardsPasajes.innerHTML = ` 
-                                <div id="grid-pasajes">
-                                    <div id="logoAerolinea" class="logo"><span>${reserva.aerolinea}</span></div>
-                                    <div id="seccion-ida" class="ida">
-                                        <span class="titulo-ida">IDA</span>
-                                        <p class="fecha-ida">${inputPartida + reserva.lugarOrigen.lugar}</p>
-                                    </div>
-                                    <div id="seccion-idaYvuelta" class="vuelta">
-                                        <span class="titulo-vuelta">REGRESO</span><p class="fecha-vuelta">${reserva.lugarDestino.lugar + inputRegreso}</p>
-                                    </div>
-                                    <div id="container-dias" class="dias"><p>${reserva.tiempoViaje}</p></div>
-                                    <div id="container-precio" class="precio">
-                                        <div class="precio-pasaje">
-                                        <span class="titulo">PRECIO</span><p>${reserva.precioFinalPasajeros}</p>      
-                                        </div>
-                                    </div>
-                                    <div class="seleccionar-pasaje" id="${idPasajes++}"><button>Seleccionar</button></div>
-                                </div>
-                                `
-        contenedorVuelos.appendChild(cardsPasajes)
-    });
-    
+
+
     
     
     
