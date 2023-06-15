@@ -206,7 +206,7 @@ footer{
       "ida vuelta"
       "precio seleccion";
     grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     width: 70%;
     margin-left: 15%;
     margin-top: 4%;
@@ -225,7 +225,7 @@ footer{
     border-bottom: solid;
     border-width: 1px;
     border-color: $lightBlue;
-    padding-left: 25%;
+    padding-left: 10%;
     padding-top: 5%;
 
     span{
