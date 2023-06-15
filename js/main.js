@@ -21,7 +21,6 @@ const botonIdaVuelta = document.getElementById('botonIdaVuelta');
 const form = document.getElementById("containerViaje");
 let idPasajes = 1;
 
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const botonIda = document.getElementById("botonIda");
@@ -31,15 +30,13 @@ form.addEventListener("submit", (e) => {
     const inputPasajeros = document.getElementById("inputPasajeros").value;
     const inputPartida = document.getElementById("inputPartida").value;
     const inputRegreso = document.getElementById("inputRegreso").value;
-    const contenedorPasajes = document.getElementById("containerPasajes");
-
 
     if (seleccionOrigen === "" || seleccionDestino === "" || inputPasajeros === "" || inputPartida === "") {
       alert("Por favor, complete todos los campos");
       return;
     }
     const aerolineasEncontradas = aerolineas.filter(aerolinea => aerolinea.habilitado.includes(Number(seleccionDestino)));
-    const reservas = aerolineasEncontradas.map(aerolinea => {
+      const reservas = aerolineasEncontradas.map(aerolinea => {
       const fechaPartida = new Date(inputPartida);
       const fechaRegreso = new Date(inputRegreso);
       const tiempoViaje = Math.ceil((fechaRegreso - fechaPartida) / (1000 * 60 * 60 * 24));
@@ -62,50 +59,6 @@ form.addEventListener("submit", (e) => {
             diasViaje: tiempoViaje,
           };
     });
-    // reservas ES EL ARRAY QUE CONTIENE LOS PASAJES CREADOS. AL MOSTRARLOS ACÁ SE VE PERFECTO
-    reservas.forEach(reserva => {
-      console.log(reserva);
-    });
-    // function retornarPasajes(reserva) {    //ESTA FUNCIÓN ME RETORNA UN BLOQUE DE HTML, template string (plantilla de texto)
-    //   return ` 
-    //             <div id="grid-pasajes">
-    //               <div id="logoAerolinea" class="logo"><span>${aerolinea.aerolinea}</span></div>
-    //               <div id="seccion-ida" class="ida">
-    //                 <span class="titulo-ida">IDA</span>
-    //                 <p class="fecha-ida">${inputPartida + lugarOrigen.lugar}</p>
-    //               </div>
-    //               <div id="seccion-idaYvuelta" class="vuelta">
-    //                 <span class="titulo-vuelta">REGRESO</span><p class="fecha-vuelta">${lugarDestino.lugar + inputRegreso}</p>
-    //               </div>
-    //               <div id="container-dias" class="dias"><p>${tiempoViaje}</p></div>
-    //               <div id="container-precio" class="precio">
-    //                 <div class="precio-pasaje">
-    //                   <span class="titulo">PRECIO</span><p>${precioFinalPasajeros}</p>      
-    //                 </div>
-    //               </div>
-    //               <div class="seleccionar-pasaje" id="${idPasajes++}"><button>Seleccionar</button></div>
-    //           </div>
-    //         `
-    // }
-    // function cargarPasajes() {
-    //   reservas.forEach(reserva => {
-    //     contenedorPasajes.innerHTML += retornarPasajes(reserva); 
-    //   })
-    // }
-    // cargarPasajes();
-
-    // function cargarPasajes() {
-    //   reservas.forEach(reserva => {
-    //     contenedorPasajes.innerHTML += retornarPasajes(reserva);
-    //   })
-    // }
-    // cargarPasajes();
+    localStorage.setItem("misReservas", JSON.stringify(reservas))
+    location.href = "../pages/pasajes.html"
 });
-
-// function cargarProductos() {
-//   container.innerHTML = ''
-//   arrayProductos.forEach((producto) => {
-//       container.innerHTML += retornoCardHTML(producto)
-//   });
-// }
-// cargarProductos()
