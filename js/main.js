@@ -65,5 +65,5 @@ form.addEventListener("submit", (e) => {
     reservas.push(reserva); // Agregar reserva al array reservas
   });
   localStorage.setItem("misReservas", JSON.stringify(reservas));
-  location.href = "../pages/pasajes.html";
+  location.href = "pages/pasajes.html";
 });
