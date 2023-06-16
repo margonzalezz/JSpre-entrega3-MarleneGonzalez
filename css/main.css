@@ -174,8 +174,8 @@ footer {
   grid-template-areas: "logo dias" "ida vuelta" "precio seleccion";
   grid-template-rows: auto auto auto;
   grid-template-columns: 2fr 1fr;
-  width: 70%;
-  margin-left: 15%;
+  width: 95%;
+  margin-left: 2.5%;
   margin-top: 4%;
   margin-bottom: 2%;
   background-color: #06657c;
@@ -191,7 +191,7 @@ footer {
   border-bottom: solid;
   border-width: 1px;
   border-color: #b6ced4;
-  padding-left: 10%;
+  padding-left: 5%;
   padding-top: 5%;
 }
 .logo span {
@@ -202,7 +202,7 @@ footer {
 .dias {
   grid-area: dias;
   border-bottom: solid;
-  border-width: 0.5px;
+  border-width: 1px;
   border-color: #b6ced4;
   padding-left: 30%;
   padding-top: 15%;

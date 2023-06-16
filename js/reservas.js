@@ -1,7 +1,8 @@
 const reservas = JSON.parse(localStorage.getItem("misReservas"));
-let diasVacios = "";
 // Verificar si hay reservas almacenadas
+
 if (reservas && reservas.length > 0) {
+
   const contenedorVuelos = document.getElementById("containerPasajes");
   reservas.forEach(reserva => {
     const cardsPasajes = document.createElement("div");
@@ -9,6 +10,7 @@ if (reservas && reservas.length > 0) {
     const nombreAerolinea = reserva.aerolinea.toLowerCase().replace(/\s/g, "-");
     const rutaImagen = `../img/icon/${nombreAerolinea}.png`;
     // Generar el contenido dinámico para cada reserva
+
     cardsPasajes.innerHTML = `
       <div id="grid-pasajes">
         <div id="logoAerolinea" class="logo">
@@ -36,6 +38,18 @@ if (reservas && reservas.length > 0) {
       </div>
     `;
     contenedorVuelos.appendChild(cardsPasajes);
+
+function obtenerBotones(reserva) {
+        const botonSeleccionar = cardsPasajes.querySelector('.seleccionar-pasaje button');
+            botonSeleccionar.addEventListener('click', () => {
+        const idReserva = reserva.id;
+        const reservaSeleccionada = reservas.find(reserva => reserva.id === idReserva);
+        alert("El pasaje fue seleccionado con éxito")
+        });
+}
+obtenerBotones(reserva);
+
+    
   });
 }
 

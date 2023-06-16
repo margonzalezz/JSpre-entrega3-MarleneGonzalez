@@ -207,8 +207,8 @@ footer{
       "precio seleccion";
     grid-template-rows: auto auto auto;
     grid-template-columns: 2fr 1fr;
-    width: 70%;
-    margin-left: 15%;
+    width: 95%;
+    margin-left: 2.5%;
     margin-top: 4%;
     margin-bottom: 2%;
     background-color: $DarkBlue;
@@ -225,7 +225,7 @@ footer{
     border-bottom: solid;
     border-width: 1px;
     border-color: $lightBlue;
-    padding-left: 10%;
+    padding-left: 5%;
     padding-top: 5%;
 
     span{
@@ -237,7 +237,7 @@ footer{
   .dias {
     grid-area: dias;
     border-bottom: solid;
-    border-width: 0.5px;
+    border-width: 1px;
     border-color: $lightBlue;
     padding-left: 30%;
     padding-top: 15%;
@@ -286,15 +286,3 @@ footer{
   }
   
   
-// .fill:hover,
-// .fill:focus {
-// .selectOrigen label::before{
-//     content: url(../img/icon/despegue.png);
-// }
-
-// .selectDestino label::after {
-//     content: url(../img/icon/aterrizaje.png);
-// }
-// .selectPasajeros label::before{
-//     content: url(../img/icon/asiento.png);
-// }
