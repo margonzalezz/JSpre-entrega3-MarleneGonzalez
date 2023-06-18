@@ -14,10 +14,6 @@ if (reservas && reservas.length > 0) {
     contenedorVuelos.insertBefore(wrapper, contenedorVuelos.firstChild);
   };
 
-  const errorCampos = () => {
-    const errores = getElementById("errorOption")
-  }
-
   reservas.forEach(reserva => {
     const cardsPasajes = document.createElement("div");
     const nombreAerolinea = reserva.aerolinea.toLowerCase().replace(/\s/g, "-");

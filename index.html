@@ -201,9 +201,8 @@
       <div class="select-idaYvuelta">
         <input type="radio" name="tipoDeViaje" id="botonIdaVuelta" value="ida_y_vuelta"> Ida y vuelta </input>
       </div>  
+      <div id="errorOption" class="form-error"></div>      
     </div>
-    <div id="errorOption" class="form-text">
-
 
       <div class="mb-3 selectOrigen">
           <label for="selectGroup" class="form-label">ORIGEN</label>
@@ -218,8 +217,8 @@
             <option value="7">Bariloche, Argentina</option>
             <option value="8">Cataratas del Iguazú, Argentina</option>
           </select>
+        <div id="errorOption" class="form-error"></div>          
       </div>
-      <div id="errorOption" class="form-text">
 
       <div class="mb-3 selectDestino">
           <label for="selectGroup" class="form-label">DESTINO</label>
@@ -234,38 +233,34 @@
             <option value="7">Bariloche, Argentina</option>
             <option value="8">Cataratas del Iguazú, Argentina</option>
           </select>
+        <div id="errorOption" class="form-error"></div>          
       </div>
-    <div id="errorOption" class="form-text">
-
 
       <!-- CANTIDAD DE PASAJEROS -->
       <div class="mb-3 selectPasajeros">
           <label for="selectGroup" class="form-label">CANTIDAD DE PASAJEROS</label>
           <input type="number" class="form-control" id="inputPasajeros" placeholder="Ingrese el número de pasajeros">
+       <div id="errorOption" class="form-error"></div>         
       </div>
-      <div id="errorOption" class="form-text">
-
 
       <!-- FECHAS -->
       <div class="mb-3 selectDate partida">
           <label for="selectGroup" class="form-label">PARTIDA</label>
           <input type="date" class="form-control" id="inputPartida">
+        <div id="errorOption" class="form-error"></div>        
       </div>
-      <div id="errorOption" class="form-text">
 
       <div class="mb-3 selectDate regreso">
           <label for="selectGroup" class="form-label">REGRESO</label>
           <input type="date" class="form-control" id="inputRegreso">
+        <div id="errorOption" class="form-error"></div>        
       </div>
-      <div id="errorOption" class="form-text">
-
 
       <!-- BOTON PARA BUSCAR -->
       <div class="buscarVuelos" id="botonCrearPasajes">
         <a href="pages/pasajes.html">
           <button type="submit" id="buscarVuelos">Buscar vuelos</button>          
         </a>
-
       </div>
     </form>
 
