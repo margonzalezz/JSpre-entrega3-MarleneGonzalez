@@ -197,13 +197,13 @@
     <div class="seleccionTipoPasaje" id="botonSeleccionTipo">
       <div class="selectIda"> 
         <input type="radio" name="tipoDeViaje" id="botonIda" value="solo_ida"> Solo ida </input>
-          <!-- <button id="botonIda">Sólo Ida</button> -->
       </div>
       <div class="select-idaYvuelta">
         <input type="radio" name="tipoDeViaje" id="botonIdaVuelta" value="ida_y_vuelta"> Ida y vuelta </input>
-          <!-- <button id="botonIdaVuelta">Ida y vuelta</button> -->
       </div>  
     </div>
+    <div id="errorOption" class="form-text">
+
 
       <div class="mb-3 selectOrigen">
           <label for="selectGroup" class="form-label">ORIGEN</label>
@@ -219,6 +219,8 @@
             <option value="8">Cataratas del Iguazú, Argentina</option>
           </select>
       </div>
+      <div id="errorOption" class="form-text">
+
       <div class="mb-3 selectDestino">
           <label for="selectGroup" class="form-label">DESTINO</label>
           <select class="form-select" aria-label="select" id="seleccionDestino">
@@ -233,22 +235,30 @@
             <option value="8">Cataratas del Iguazú, Argentina</option>
           </select>
       </div>
+    <div id="errorOption" class="form-text">
+
 
       <!-- CANTIDAD DE PASAJEROS -->
       <div class="mb-3 selectPasajeros">
           <label for="selectGroup" class="form-label">CANTIDAD DE PASAJEROS</label>
           <input type="number" class="form-control" id="inputPasajeros" placeholder="Ingrese el número de pasajeros">
       </div>
+      <div id="errorOption" class="form-text">
+
 
       <!-- FECHAS -->
       <div class="mb-3 selectDate partida">
           <label for="selectGroup" class="form-label">PARTIDA</label>
           <input type="date" class="form-control" id="inputPartida">
       </div>
+      <div id="errorOption" class="form-text">
+
       <div class="mb-3 selectDate regreso">
           <label for="selectGroup" class="form-label">REGRESO</label>
           <input type="date" class="form-control" id="inputRegreso">
       </div>
+      <div id="errorOption" class="form-text">
+
 
       <!-- BOTON PARA BUSCAR -->
       <div class="buscarVuelos" id="botonCrearPasajes">

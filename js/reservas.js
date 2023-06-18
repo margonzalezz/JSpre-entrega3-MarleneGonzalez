@@ -14,6 +14,10 @@ if (reservas && reservas.length > 0) {
     contenedorVuelos.insertBefore(wrapper, contenedorVuelos.firstChild);
   };
 
+  const errorCampos = () => {
+    const errores = getElementById("errorOption")
+  }
+
   reservas.forEach(reserva => {
     const cardsPasajes = document.createElement("div");
     const nombreAerolinea = reserva.aerolinea.toLowerCase().replace(/\s/g, "-");
@@ -29,7 +33,8 @@ if (reservas && reservas.length > 0) {
         <p class="titulo-ida">ORIGEN:<br>${reserva.origen}</p>
           <p class="fecha-ida">${reserva.partida}</p>
         </div>
-        ${reserva.pasaje === "solo_ida" ? "" :
+        ${reserva.pasaje === "solo_ida" ? `<div id="seccion-idaYvuelta" class="vuelta">
+        <p class="titulo-vuelta">DESTINO:<br>${reserva.destino}</p> </div>`:
         `<div id="seccion-idaYvuelta" class="vuelta">
           <p class="titulo-vuelta">DESTINO:<br>${reserva.destino}</p>
             <p class="fecha-vuelta">${reserva.regreso}</p>
