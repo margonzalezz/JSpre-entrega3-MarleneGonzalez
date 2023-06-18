@@ -1,5 +1,6 @@
 const reservas = JSON.parse(localStorage.getItem("misReservas"));
-const miPasaje = [];
+let miReserva;
+const misPasajes = [];
 
 if (reservas && reservas.length > 0) {
   const contenedorVuelos = document.getElementById("containerPasajes");
@@ -35,8 +36,7 @@ if (reservas && reservas.length > 0) {
           <p class="titulo-vuelta">DESTINO:<br>${reserva.destino}</p>
             <p class="fecha-vuelta">${reserva.regreso}</p>
         </div>`}
-        ${reserva.pasaje === "solo_ida" ? '' :
-        `<div id="container-dias" class="dias"><p>${reserva.diasViaje + " días"}</p></div>`}
+        ${reserva.pasaje === "solo_ida" ? '' : `<div id="container-dias" class="dias"><p>${reserva.diasViaje + " días"}</p></div>`}
         <div id="container-precio" class="precio">
           <div class="precio-pasaje">
             <span class="titulo">PRECIO</span>
@@ -52,7 +52,12 @@ if (reservas && reservas.length > 0) {
 
     function obtenerBotones(reserva) {
       const botonSeleccionar = cardsPasajes.querySelector('.seleccionar-pasaje button');
-      botonSeleccionar.addEventListener('click', () => {appendAlert('La reserva fue realizada con éxito.', 'success')});
+      botonSeleccionar.addEventListener('click', () => {
+        appendAlert('La reserva fue realizada con éxito.', 'success');
+        miReserva = reserva;
+        misPasajes.push(miReserva);
+        localStorage.setItem("miReserva", JSON.stringify(miReserva));
+      });
     }
     obtenerBotones(reserva);
   });
