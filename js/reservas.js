@@ -52,9 +52,7 @@ if (reservas && reservas.length > 0) {
 
     function obtenerBotones(reserva) {
       const botonSeleccionar = cardsPasajes.querySelector('.seleccionar-pasaje button');
-      botonSeleccionar.addEventListener('click', () => {
-        appendAlert('La reserva fue realizada con éxito.', 'success');
-      });
+      botonSeleccionar.addEventListener('click', () => {appendAlert('La reserva fue realizada con éxito.', 'success')});
     }
     obtenerBotones(reserva);
   });
